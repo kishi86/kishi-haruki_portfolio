@@ -1,0 +1,26 @@
+@import "../common";
+.slit_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.slit {
+  position: relative;
+  width: 100%;
+  img {
+    position: absolute;
+    width: 100vw;
+    // height: 100vh;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+}
+// .slit::after{
+//     content: "";
+//     position: absolute;
+//     z-index: -1;
+//     top: 100vh;
+//     background-color: #ffffff;
+//     width: 100vw;
+//     height: 100vh;
+//   }

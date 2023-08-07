@@ -1,0 +1,40 @@
+@import "../common";
+
+.first_view {
+  position: relative;
+  .title {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    img {
+      mix-blend-mode: overlay;
+      margin-top: calc(50vh - 454px/2);
+      margin-bottom: calc(50vh - 454px/2);
+      width: auto;
+      height: 454px;
+      
+    }
+  }
+
+  .scroll{
+    position: absolute;
+    right: 32px;
+    bottom: 10vh;
+  }
+  }
+
+@media screen and (max-width: $blake-point) {
+  .first_view {
+    .title img{
+    width: auto;
+    height: 30vmax;
+    margin-top: 20vh;
+    margin-bottom: 50vh;
+  }
+  .scroll{
+    position: absolute;
+    right: 50%;
+    bottom: 11vh;
+  }
+  }
+}

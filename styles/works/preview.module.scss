@@ -1,0 +1,55 @@
+@import "../common";
+.preview{
+  margin-top: $grid*4;
+  background-color: #ffffff;
+  padding: 15% $side_padding;
+  .thumbnail{
+    display: flex;
+    justify-content: left;
+    gap: 2vw;
+    .image{
+      width: calc(50% - 1vw);
+    }
+    .button{
+      // margin-left: 10%;
+      // font-size: 18pt;
+      position: relative;
+      width: 20%;
+      margin: auto 0;
+      font-family: $en-font-medium;
+      font-size: $regular-font;
+      letter-spacing: 0.025em;
+      transition: 0.15s ease-out;
+      text-align: right;
+      align-items: center;
+    }
+    .button::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border: 0.5px solid;
+      width: 45%;
+    }
+  }
+  .button:hover{
+    color: $blue;
+  }
+}
+@media screen and (max-width:$blake-point) {
+  .preview{
+    .thumbnail{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .button{
+        font-size: $mini-font-s;
+        width: 30%;
+        margin:0 0 0 auto;
+        margin-top: 8%;
+      }
+    }
+    
+  }
+  
+}

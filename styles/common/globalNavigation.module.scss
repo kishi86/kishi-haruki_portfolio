@@ -1,0 +1,63 @@
+@import "../common";
+
+.menu_list {
+  // font-size: 14pt;
+  font-size: $regular-font;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  // height: $grid*2;
+  height: calc($grid*2);
+  // height: calc(calc(5vmax / 46px) * 46px);
+  // width: calc(22em + 64px*2);
+  // width: $grid*12;
+  padding: 0 64px;
+  
+  align-items: center;
+  // gap: 64px;
+  .menu_item {
+    position: relative;
+    margin-right: 5vmax;
+  }
+  .menu_item:last-child{
+    margin-right: 0;
+    padding-right: 0;
+  }
+  div {
+    font-family: $en-font-medium;
+    transition: 0.2s ease-out;
+  }
+
+  .to_top:hover {
+    color: $green;
+  }
+
+  .to_profile:hover {
+    color: $pink-red;
+  }
+
+  .to_works:hover {
+    color: $blue;
+  }
+
+  .to_contact {
+    color: $orange;
+  }
+}
+
+@media screen and (max-width:$blake-point) {
+  .menu_list .menu_item{
+    font-size: $regular-font-s;
+  }
+}
+@media screen and (max-width:500px){
+  .menu_list{
+    justify-content: space-between;
+    width: 100%;
+    height: $grid;
+    padding: 0 10vw;
+  }
+}

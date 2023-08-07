@@ -1,0 +1,41 @@
+@import "../common";
+
+.works{
+  font-style: normal;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+  padding: 12% $side_padding;
+  // padding: 240px $side_padding;
+  // width: 100%;
+  h2{
+    font-size: $large-font;
+    padding-bottom: 5%;
+  }
+  .works_list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    li{
+      width: calc(50% - 12px);;
+    }
+  }
+}
+
+@media screen and (max-width: $blake-point) {
+  .works{
+    padding: 20% $side_padding;
+    h2{
+      font-size: $large-font-s;
+    }
+    .works_list{
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+      li{
+        width: 100%;
+      }
+    }
+  }
+}

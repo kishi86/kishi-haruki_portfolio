@@ -1,0 +1,45 @@
+@import "../common";
+  .scroll {
+    position: absolute;
+    
+    // right: 32px;
+    // bottom: 10vh;
+    .arrow{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        position: absolute;
+        position: absolute;
+        top: -145px;
+        width: 10px;
+      }
+      img:first-of-type{
+        top: -160px;
+        animation: bound 0.3s ease-in infinite alternate;
+        @keyframes bound {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(3px);
+            }
+          }
+      }
+      .text {
+        font-family: $en-font-medium;
+        font-size: 12pt;
+        line-height: 0;
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+      }
+      
+    }
+  }
+
+@media screen and (max-width: $blake-point) {
+  .scroll .arrow .text{
+    font-size: 12pt;
+  }
+}

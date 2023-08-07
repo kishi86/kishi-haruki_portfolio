@@ -1,0 +1,49 @@
+@import "../styles/common";
+html,
+*{
+  // font-family: "toppan-bunkyu-gothic-pr6n", "HelveticaNeue", sans-serif;
+  font-family:
+   "HelveticaNeue",
+   "toppan-bunkyu-gothic-pr6n",
+   "Helvetica",
+   "Arial",
+   "HiraKakuProN-W4",
+   "ヒラギノ角ゴ ProN W4",
+   "Yu Gothic",
+   "游ゴシック",
+   sans-serif;
+  font-weight: $normal;
+  color: #444444;
+  // font-size: 16pt;
+  font-feature-settings: "palt";
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 ,h2 ,h3 {
+  letter-spacing: 0.025em;
+  font-family: $en-font-medium;
+  font-weight: $normal;
+}
+
+ul {
+  list-style: none
+}
+li{
+  padding-left: 0
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+

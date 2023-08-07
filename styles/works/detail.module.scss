@@ -1,0 +1,39 @@
+@import "../common";
+.worksDetail{
+  display: flex;
+  flex-flow: column;
+  background-color: #ffffff;
+  padding: 128px $side_padding 5vmax $side_padding;
+  h1{
+    font-weight: $semi-bold;
+    // font-size: 18pt;
+    font-size: $regular-font;
+    margin-bottom: 1.5em;
+  }
+  .pictures_list{
+    display: block;
+    li{
+      position: relative;
+      margin: 0 auto;
+      background-color: #eeeeee;
+      margin-bottom: 5%;
+      // height: 100vh;
+      height: calc(90vw * 0.6);
+      width: 100%;
+      img{
+        position: absolute;
+        height: 80%;
+        width: 80%;
+        top: calc( 50% - 80%/2);
+        left: calc( 50% - 80%/2);
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$blake-point) {
+  .worksDetail h1{
+    font-size: $regular-font-s;
+  }
+}

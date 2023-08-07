@@ -1,0 +1,75 @@
+@import "../common";
+
+.contact {
+  position: relative;
+  margin-top: $grid*4;
+  padding-bottom: $grid*4;
+  .back{
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    width: 25.5vw;
+    height: 25.5vw;
+    .contact_address {
+      height: calc(25.5vw/3);
+      padding: 30% 0;
+      // transform: translateY(calc(25.5vw/3));
+      // transform: translateY(50%);
+      h2 {
+        font-size: $large-font;
+        margin-bottom: 8%;
+        // font-size: 32pt;
+        // margin-bottom: 28px;
+      }
+      .triangle {
+        margin: 0 auto 8% auto;
+        width: 2.5%;
+      }
+      a {
+        font-family: $en-font-medium;
+        font-size: $regular-font;
+        // font-size: 18pt;
+        letter-spacing: 0.075em;
+        transition: 0.1s ease-in-out ;
+      }
+      a:hover{
+        color: $orange;
+      }
+    }
+  }
+  .back:hover{
+    .triangle{
+      animation:bound 0.3s ease-in infinite alternate;
+      img{
+        fill: $orange;
+        stroke: $orange;
+      }
+    }
+    @keyframes bound {
+      0%{transform: translateY(0);}
+      100%{transform: translateY(5px);}
+    }
+  }
+}
+
+@media screen and (max-width:$blake-point) {
+  .contact{
+    .back{
+      width: 30vmax;
+      height: 30vmax;
+      .contact_address{
+        padding: 25% 0;
+        h2{
+        font-size: $large-font-s;
+        }
+        .triangle {
+        margin: 0 auto 8% auto;
+        width: 3%;
+        }
+        a{
+          font-size: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import "../common";
+
+.introduction_text{
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  z-index: 5;
+  padding: $grid*3.2 $side_padding 10% $side_padding;
+  h2{
+    font-size: $large-font;
+    padding-bottom: 5.5vmax;
+    opacity: 0;
+    transform: translateY(-20);
+  }
+  .text{
+    // width: 40vw;
+    // width: 630px;
+    height: auto;
+    margin-left: 1.5vw;
+    opacity: 0;
+    transform: translateY(-20);
+    .text_narrow{
+      display: none;
+    }
+    .text_wide{
+      display: block;
+    }
+    img{
+      height: 1.6vmax;
+      margin-bottom: 4.2vmax;
+    }
+    .birth,.enrollment {
+      padding-bottom: 3.3vmax;
+      img{
+        height: $mini-font;
+        margin-bottom: 2.2vmax;
+      }
+      img:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .introduction {
+      padding-top: 2.2vmax;
+      img{
+        height: $mini-font;
+        margin-bottom: 4vmax;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$blake-point){
+  .introduction_text{
+    h2{
+      font-size: $large-font-s;
+    }
+      .text{
+      img {
+        height: 2.5vmax;
+      }
+      .birth,
+      .enrollment,
+      .introduction {
+        img {
+          height: $mini-font-s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:500px){
+  .introduction_text .text {
+    .text_wide {
+      display: none;
+    }
+    .text_narrow {
+      display: block;
+    }
+    img {
+      margin-bottom: 5vmax;
+    }
+    .birth,
+    .enrollment{
+      padding-bottom: 3vmax;
+      img {
+
+      }
+    }
+    .introduction {
+      padding-top: 3vmax;
+      img {
+        margin-bottom: 4vmax;
+      }
+    }
+  }
+}

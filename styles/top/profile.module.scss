@@ -1,0 +1,98 @@
+@import "../common";
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: white;
+  margin: 30vh 13%;
+  padding: 9% 5% 6% 6%;
+  
+  .profile_text {
+    .text_narrow{
+      display: none;
+    }
+    .text_wide{
+      display: block;
+      img{
+        height: $regular-font;
+        margin-bottom: 3.4vmax;
+      }
+      img:last-child{
+        margin-bottom: 0;
+      }
+    }
+    // width: 636px;
+    // width: 43vw;
+    // height: auto;
+  }
+  .profile_button{
+    // border: 1px solid blue;
+    // margin-left: calc(100% - 90px);
+    // font-size: 14pt;
+    position: relative;
+    margin: 12% 0 0 auto;
+    margin-left: 90%;
+    font-family: $en-font-medium;
+    font-size: $regular-font;
+    letter-spacing: 0.025em;
+    transition: 0.15s ease-out;
+  }
+  .profile_button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 145%;
+    border: 0.5px solid ;
+    width:165%;
+    // right:  80px;
+    // width: 90px;
+    // transition: 0.2s ease-out;
+  }
+  .profile_button:hover {
+    // background-color: red;
+    color: $pink-red;
+  }
+}
+
+@media screen and (max-width: $blake-point) {
+  .profile {
+    background-color: white;
+      margin: 20vh 0;
+      padding: 20% 12%;
+    .profile_text 
+    .text_wide img{
+      height: $regular-font-s;
+    }
+    .profile_button{
+      font-size: $regular-font-s;
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .profile {
+    background-color: white;
+    margin: 20vh 0;
+    padding: 26% 12%;
+    .profile_text {
+      .text_wide {
+        display: none;
+      }
+      .text_narrow {
+        display: block;
+        img {
+          height: $regular-font-s;
+          margin-bottom: 5.4vmax;
+        }
+        img:last-child {
+          margin-bottom: 0;
+        }
+      }
+      width: 76vmax;
+    }
+    .profile_button {
+      margin: 35% 0 0 82%;
+    }
+  }
+}
