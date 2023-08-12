@@ -1,9 +1,16 @@
 @import "../common";
 .title{
   white-space: nowrap;
+
+    // opacity: 1;
+    // display: flex;
+    // justify-content: center;
+    // mix-blend-mode: overlay;
+    // transform: scale(1);
+
   img {
     display: inline;
-    height: 10vw;
+    height: 10vmax;
   }
   .first_name{
     // padding-bottom: 34px;
@@ -53,7 +60,7 @@
   }
   .sub_title{
     img{
-      height: 2.5vw;
+      height: 2.5vmax;
       // padding-right: 24px;
       
     }img:nth-of-type(1) {

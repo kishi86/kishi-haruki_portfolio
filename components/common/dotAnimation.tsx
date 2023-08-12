@@ -25,13 +25,14 @@ let timer: any;
 export const DotAnimation = () => {
   const setup = (p5: p5Types, canvasParentRef: Element) => {
     // p5でいうsetupの処理を書く
-    p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
+    // p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(canvasParentRef);
+    p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef);
     p5.background(0);
     p5.colorMode(p5.RGB, p5.width, p5.height, 100);
     circles.forEach((circle)=>circle.kill())
     circleLocation(p5);
-    console.log("wid",window.innerWidth);
-    console.log("p5wid",p5.windowWidth);
+    // console.log("wid",window.innerWidth);
+    // console.log("p5wid",p5.windowWidth);
   };
 
   const draw = (p5: p5Types) => {

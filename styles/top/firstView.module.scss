@@ -3,13 +3,13 @@
 .firstView {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: auto;
   .title {
     opacity: 1;
     display: flex;
     justify-content: center;
     mix-blend-mode: overlay;
-    transform: scale(1);
+    padding-top: 20%;
   }
   .scroll{
     position: absolute;
@@ -21,10 +21,8 @@
 @media screen and (max-width: $blake-point) {
   .firstView {
     height: 100vh;
-    width: 100vw;
     .title{
       padding-top: 25%;
-      transform: scale(1.2);
     // transform: translateX(-50%, -50%);
     // margin-bottom: 50vh;
     }
@@ -38,7 +36,7 @@
 @media screen and (max-width: 500px) {
   .firstView{
     .title{
-      transform: scale(1.5);
+      padding-top: 35%;
     }
   }
 }

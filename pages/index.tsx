@@ -1,9 +1,8 @@
 import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
-
 import Profile from "@/components/top/profile"
-import FirstView from '@/components/top/firstView'
+
 import Works from "@/components/top/works"
 import hideStyle from "@/styles/common/hide.module.scss"
 import styles from "@/styles/top/firstView.module.scss"
@@ -17,6 +16,8 @@ export const Index = () => {
   let navigationRef = useRef<HTMLDivElement>(null!);
   let worksRef = useRef<HTMLDivElement>(null!);
   let targetRef = useRef<HTMLDivElement>(null!);
+  let firstViewRef = useRef<HTMLDivElement>(null!);
+
   let scrollAfter: number = 0;
   let scrollBefore: number = 0;
   let windowHeight: number;
@@ -29,17 +30,16 @@ export const Index = () => {
     }
   }, []);
 
-  const scroll =(event:Event)=>{
+  const scroll = (event:Event)=>{
     scrollAfter = window.scrollY;
     windowHeight = window.innerHeight;
-    onScroll(contactRef,navigationRef,scrollAfter,scrollBefore);
+    onScroll(contactRef,navigationRef,scrollAfter,scrollBefore);scrollBefore = scrollAfter;
     // onScrollOnce(targetRef,scrollAfter,scrollBefore,windowHeight);
-    scrollBefore = scrollAfter;
-    console.log("Y",window.scrollY)
-    console.log("A",scrollAfter)
-    console.log("h",window.innerHeight)
+    
+    // console.log("Y",window.scrollY)
+    // console.log("A",scrollAfter)
+    // console.log("h",window.innerHeight)
   }
-  
 
   return (
     <>
@@ -49,7 +49,7 @@ export const Index = () => {
       <GlobalNavigation topFlag={true}/>
     </div>
 
-    <div className={styles.firstView}>
+    <div className={styles.firstView} ref={firstViewRef}>
       <div className={styles.title}>
         <TitleImage />
       </div>
