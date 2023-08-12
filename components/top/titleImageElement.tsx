@@ -1,53 +1,24 @@
 import styles from '@/styles/top/titleImageElement.module.scss'
 import React,{useEffect,useRef} from "react"
 import gsap  from 'gsap'
+import { start } from 'repl';
 
 export const TitleImage = () =>{
-  const ArrowRef = useRef<HTMLDivElement>(null);
+  const NameRef = useRef<HTMLImageElement>(null);
   let matchMedeia = gsap.matchMedia();
-    // useEffect(()=> {
-
-    //   matchMedeia.add("(min-width: 769px)" , ()=>{
-    //     gsap.fromTo(
-    //     ArrowRef.current, {
-    //       opacity: 1,
-    //       y: 0
-    //     }
-    //     ,{
-    //       opacity:0,
-    //       y: -100,
-    //       duration: 1,
-    //       ease: "power4.out",
-    //       scrollTrigger:{
-    //         start:'top 60%',
-    //         trigger: ArrowRef.current,
-    //         markers:true,
-    //       },
-    //     }
-    //   )
-    //   })
-    //   matchMedeia.add("(max-width: 768px)" , ()=>{
-    //     gsap.fromTo(
-    //     ArrowRef.current, {
-    //       opacity: 1,
-    //       y: 0
-    //     }
-    //     ,{
-    //       opacity:0,
-    //       y: -100,
-    //       duration: 1,
-    //       ease: "power4.out",
-    //       scrollTrigger:{
-    //         start:'top 60%',
-    //         trigger: ArrowRef.current,
-    //         // markers:true,
-    //       },
-    //     }
-    //   )
-
-    //   })
-      
-    // })
+    useEffect(()=> {
+      gsap.from('img',{
+        y: -50,
+        autoAlpha: 0,
+        ease: "power4.out",
+        duration:1,
+        stagger:{
+          // ease: "PowerInOut",
+          from: "start",
+          each: 0.1,
+        }
+      })
+    })
 
   return(
     <div className={styles.title} >

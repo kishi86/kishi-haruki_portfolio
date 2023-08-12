@@ -9,12 +9,12 @@
     display: flex;
     justify-content: center;
     mix-blend-mode: overlay;
-    padding-top: 20%;
+    padding-top: calc(50vh - 32vmax/2);
   }
   .scroll{
     position: absolute;
     right: 32px;
-    bottom: 15vh;
+    bottom: 10vh;
   }
   }
 
