@@ -9,9 +9,9 @@ import Detail from "@/components/work/detail"
 import Description from "@/components/work/description"
 import Preview from "@/components/work/preview"
 
-import fade from "@/styles/common/navigationStyle.module.scss"
+import fade from "@/styles/common/hide.module.scss"
 import React,{Ref, useEffect,useRef} from "react"
-import { onScroll } from "@/js/footerAnimation"
+import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
 
 

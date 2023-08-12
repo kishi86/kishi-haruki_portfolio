@@ -6,9 +6,11 @@ import Profile from "@/components/top/profile"
 import FirstView from '@/components/top/firstView'
 import Works from "@/components/top/works"
 import hideStyle from "@/styles/common/hide.module.scss"
-
+import styles from "@/styles/top/firstView.module.scss"
 import React,{Ref, useEffect,useRef} from "react"
-import { onScroll ,onScrollOnce} from "@/js/footerAnimation"
+import { onScroll } from "@/js/hideAnimation"
+import TitleImage from "@/components/top/titleImageElement"
+import ScrollArrow from "@/components/top/scrollArrowElement"
 
 export const Index = () => {
   let contactRef = useRef<HTMLDivElement>(null!);
@@ -46,9 +48,16 @@ export const Index = () => {
      ref={navigationRef} >
       <GlobalNavigation topFlag={true}/>
     </div>
-    <div className={hideStyle.firstView} ref={targetRef}>
-      <FirstView />
+
+    <div className={styles.firstView}>
+      <div className={styles.title}>
+        <TitleImage />
+      </div>
+      <div className={styles.scroll}>
+        <ScrollArrow />
+      </div>
     </div>
+
     <main>
     <div className={hideStyle.profile}>
       <Profile />

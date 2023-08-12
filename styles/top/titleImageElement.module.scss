@@ -1,66 +1,92 @@
 @import "../common";
 .title{
-  margin: 100px;
+  white-space: nowrap;
   img {
     display: inline;
-    height: 140px;
+    height: 10vw;
   }
   .first_name{
-    padding-bottom: 34px;
+    // padding-bottom: 34px;
+    padding-bottom: 6.6%;
     img:nth-of-type(1){
-      padding-right: 4px;
+      // padding-right: 4px;
+      padding-right: 0.6%;
     }
     img:nth-of-type(2){
-      padding-right: 9px;
+      // padding-right: 9px;
+      padding-right: 1.4%;
     }
     img:nth-of-type(3) {
-      padding-right: 7px;
+      // padding-right: 7px;
+      padding-right: 1.6%;
     }
     img:nth-of-type(4) {
-      padding-right: 10px;
+      // padding-right: 10px;
+      padding-right: 2%;
     }
   }
 
   .family_name{
-    padding-bottom: 46px;
+    // padding-bottom: 46px;
+    padding-bottom: 9%;
     img:nth-of-type(1){
-      padding-right: 2px;
+      // padding-right: 2px;
+      padding-right: 0.3%;
     }
     img:nth-of-type(2) {
-      padding-right: 6px;
+      // padding-right: 6px;
+      padding-right: 1.2%;
     }
     img:nth-of-type(3) {
-      padding-right: 4px;
+      // padding-right: 4px;
+      padding-right: 0.6%;
     }
     img:nth-of-type(4) {
-      padding-right: 10px;
+      // padding-right: 10px;
+      padding-right: 2%;
     }
     img:nth-of-type(5) {
-      padding-right: 3px;
+      // padding-right: 3px;
+      padding-right: 0.5%;
     }
+    
   }
   .sub_title{
     img{
-      height: 35px;
-      padding-right: 24px;
+      height: 2.5vw;
+      // padding-right: 24px;
+      
+    }img:nth-of-type(1) {
+      // padding-right: 22px;
+      padding-right: 4.2%;
+    }
+    img:nth-of-type(2) {
+      // padding-right: 22px;
+      padding-right: 4.5%;
     }
     img:nth-of-type(3) {
-      padding-right: 22px;
+      // padding-right: 22px;
+      padding-right: 4.2%;
     }
     img:nth-of-type(4) {
-      padding-right: 21px;
+      // padding-right: 21px;
+      padding-right: 4%;
     }
     img:nth-of-type(5) {
-      padding-right: 22px;
+      // padding-right: 22px;
+      padding-right: 4%;
     }
     img:nth-of-type(6) {
-      padding-right: 22px;
+      // padding-right: 22px;
+      padding-right: 4%;
     }
     img:nth-of-type(7) {
-      padding-right: 15px;
+      // padding-right: 15px;
+      padding-right: 2.8%;
     }
     img:nth-of-type(8) {
-      padding-right: 16px;
+      // padding-right: 16px;
+      padding-right: 3%;
     }
   }
 }

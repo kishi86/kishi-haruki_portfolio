@@ -6,9 +6,9 @@ import SelfIntroduction from "@/components/profile/introduction"
 import Skills from "@/components/profile/skills"
 
 import slit from "@/styles/profile/triangleSlit.module.scss"
-import styles from "@/styles/common/navigationStyle.module.scss"
+import styles from "@/styles/common/hide.module.scss"
 import React,{Ref, useEffect,useRef} from "react"
-import { onScroll } from "@/js/footerAnimation"
+import { onScroll } from "@/js/hideAnimation"
 
 export const ProfilePage = () => {
   let contactRef = useRef<HTMLDivElement>(null!);

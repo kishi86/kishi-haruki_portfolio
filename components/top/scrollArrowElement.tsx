@@ -7,45 +7,45 @@ export const ScrollArrow = () =>{
   let matchMedeia = gsap.matchMedia();
     useEffect(()=> {
 
-      matchMedeia.add("(min-width: 769px)" , ()=>{
-        gsap.fromTo(
-        ArrowRef.current, {
-          opacity: 1,
-          y: 0
-        }
-        ,{
-          opacity:0,
-          y: -100,
-          duration: 1,
-          ease: "power4.out",
-          scrollTrigger:{
-            start:'top 60%',
-            trigger: ArrowRef.current,
-            markers:true,
-          },
-        }
-      )
-      })
-      matchMedeia.add("(max-width: 768px)" , ()=>{
-        gsap.fromTo(
-        ArrowRef.current, {
-          opacity: 1,
-          y: 0
-        }
-        ,{
-          opacity:0,
-          y: -100,
-          duration: 1,
-          ease: "power4.out",
-          scrollTrigger:{
-            start:'top 60%',
-            trigger: ArrowRef.current,
-            // markers:true,
-          },
-        }
-      )
+      // matchMedeia.add("(min-width: 769px)" , ()=>{
+      //   gsap.fromTo(
+      //   ArrowRef.current, {
+      //     opacity: 1,
+      //     y: 0
+      //   }
+      //   ,{
+      //     opacity:0,
+      //     y: -100,
+      //     duration: 1,
+      //     ease: "power4.out",
+      //     scrollTrigger:{
+      //       start:'top 80%',
+      //       trigger: ArrowRef.current,
+      //       markers:true,
+      //     },
+      //   }
+      // )
+      // })
+      // matchMedeia.add("(max-width: 768px)" , ()=>{
+      //   gsap.fromTo(
+      //   ArrowRef.current, {
+      //     opacity: 1,
+      //     y: 0
+      //   }
+      //   ,{
+      //     opacity:0,
+      //     y: -100,
+      //     duration: 1,
+      //     ease: "power4.out",
+      //     scrollTrigger:{
+      //       start:'top 60%',
+      //       trigger: ArrowRef.current,
+      //       // markers:true,
+      //     },
+      //   }
+      // )
 
-      })
+      // })
       
     })
 

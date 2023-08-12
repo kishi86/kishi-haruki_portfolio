@@ -30,7 +30,8 @@ export const DotAnimation = () => {
     p5.colorMode(p5.RGB, p5.width, p5.height, 100);
     circles.forEach((circle)=>circle.kill())
     circleLocation(p5);
-    console.log(window.innerWidth);
+    console.log("wid",window.innerWidth);
+    console.log("p5wid",p5.windowWidth);
   };
 
   const draw = (p5: p5Types) => {

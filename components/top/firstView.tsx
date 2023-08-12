@@ -33,10 +33,10 @@ export const FirstView = () =>{
   return(
     <section className={styles.first_view}>
       <h1>
-        <TitleImage />
-        {/* <div className={styles.title} ref={titleRef}>
-          <img src="../images/top/title_image.svg" alt="キシハルキ ポートフォリオ" />
-        </div> */}
+        <div className={styles.title} ref={titleRef}>
+           {/* <TitleImage /> */}
+          {/* <img src="../images/top/title_image.svg" alt="キシハルキ ポートフォリオ" /> */}
+        </div>
       </h1>
       <div className={styles.scroll}>
         <ScrollArrow />
