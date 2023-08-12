@@ -1,3 +1,4 @@
+import { log } from "console";
 import { MutableRefObject, Ref, RefObject, useEffect,useRef } from "react";
 
 let showFlag: boolean = true;
@@ -34,5 +35,28 @@ if(clientRef.current){
       // console.log("opa",navigationRef.current.style.opacity);
     }
 }
-
 }
+let titleFlag: boolean = true;
+
+export function onScrollOnce(
+  targetRef: MutableRefObject<HTMLDivElement>,
+  scrollAfter: number= 0,
+  scrollBefore: number= 0,
+  windowHeight: number
+  ){
+    if(targetRef.current){
+      console.log("titleFlag",titleFlag)
+      if(titleFlag == true &&
+        (scrollAfter > scrollBefore / 3)){
+          // console.log("A",scrollAfter,"B",scrollBefore)
+          targetRef.current.style.opacity = '0';
+          targetRef.current.style.visibility = 'hidden';
+          titleFlag = false;
+        }
+        else if(titleFlag == false && (scrollAfter < windowHeight / 2)){
+        targetRef.current.style.opacity = '1';
+        targetRef.current.style.visibility = 'visible';
+        titleFlag = true;
+      }
+    }
+  }

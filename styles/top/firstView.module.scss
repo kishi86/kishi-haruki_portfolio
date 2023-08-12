@@ -3,16 +3,18 @@
 .first_view {
   position: relative;
   .title {
-    opacity: 0;
+    opacity: 1;
     display: flex;
     justify-content: center;
+    
     img {
       mix-blend-mode: overlay;
-      margin-top: calc(50vh - 454px/2);
-      margin-bottom: calc(50vh - 454px/2);
+      margin: calc(50vh - 454px/2) 0;
+      // position: fixed;
+      // margin-top: calc(50vh - 454px/2);
+      // margin-bottom: calc(50vh - 454px/2);
       width: auto;
       height: 454px;
-      
     }
   }
 

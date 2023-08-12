@@ -3,10 +3,12 @@ import React,{useEffect,useRef} from "react"
 import gsap  from 'gsap'
 
 export const ScrollArrow = () =>{
-  const ArrowRef =
-    useRef<HTMLDivElement>(null);
+  const ArrowRef = useRef<HTMLDivElement>(null);
+  let matchMedeia = gsap.matchMedia();
     useEffect(()=> {
-      gsap.fromTo(
+
+      matchMedeia.add("(min-width: 769px)" , ()=>{
+        gsap.fromTo(
         ArrowRef.current, {
           opacity: 1,
           y: 0
@@ -17,12 +19,34 @@ export const ScrollArrow = () =>{
           duration: 1,
           ease: "power4.out",
           scrollTrigger:{
-            start:'top 90%',
+            start:'top 60%',
             trigger: ArrowRef.current,
             markers:true,
           },
         }
       )
+      })
+      matchMedeia.add("(max-width: 768px)" , ()=>{
+        gsap.fromTo(
+        ArrowRef.current, {
+          opacity: 1,
+          y: 0
+        }
+        ,{
+          opacity:0,
+          y: -100,
+          duration: 1,
+          ease: "power4.out",
+          scrollTrigger:{
+            start:'top 60%',
+            trigger: ArrowRef.current,
+            // markers:true,
+          },
+        }
+      )
+
+      })
+      
     })
 
   return(
