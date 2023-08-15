@@ -2,7 +2,7 @@ import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
 import Profile from "@/components/top/profile"
-
+import gsap  from 'gsap'
 import Works from "@/components/top/works"
 import hideStyle from "@/styles/common/hide.module.scss"
 import styles from "@/styles/top/firstView.module.scss"
@@ -17,12 +17,19 @@ export const Index = () => {
   let worksRef = useRef<HTMLDivElement>(null!);
   let targetRef = useRef<HTMLDivElement>(null!);
   let firstViewRef = useRef<HTMLDivElement>(null!);
+  let backGroundRef = useRef<HTMLDivElement>(null);
 
   let scrollAfter: number = 0;
   let scrollBefore: number = 0;
   let windowHeight: number;
 
   useEffect(() => {
+    gsap.from(backGroundRef.current,{
+      autoAlpha:0,
+      delay:3.8,
+      duration:1
+    })
+
     window.addEventListener("scroll",scroll);
     return()=>{
       window.removeEventListener("scroll",scroll);
@@ -34,16 +41,13 @@ export const Index = () => {
     scrollAfter = window.scrollY;
     windowHeight = window.innerHeight;
     onScroll(contactRef,navigationRef,scrollAfter,scrollBefore);scrollBefore = scrollAfter;
-    // onScrollOnce(targetRef,scrollAfter,scrollBefore,windowHeight);
-    
-    // console.log("Y",window.scrollY)
-    // console.log("A",scrollAfter)
-    // console.log("h",window.innerHeight)
   }
 
   return (
     <>
-    <DotAnimation />
+    <div ref={backGroundRef}>
+      <DotAnimation />
+    </div>
     <div className={hideStyle.globalNavigation}
      ref={navigationRef} >
       <GlobalNavigation topFlag={true}/>
