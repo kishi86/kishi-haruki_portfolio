@@ -15,11 +15,11 @@ export const Profile = () =>{
   useEffect(()=> {
     gsap.fromTo(
       ProfileSectionRef.current, {
-        opacity: 0,
+        autoAlpha: 0,
         y:120,
       }
       ,{
-        opacity:1,
+        autoAlpha:1,
         y: 0,
         duration: 1.5,
         ease: "power4.out",

@@ -6,7 +6,6 @@ import { title } from 'process';
 import { create } from 'domain';
 
 export const TitleImage = () =>{
-  // const TitleRef = useRef<HTMLDivElement>(null);
   let familyNameRef = useRef<RefObject<HTMLImageElement >[]>([
     createRef(),
     createRef(),
@@ -34,7 +33,7 @@ export const TitleImage = () =>{
     createRef()
   ]);
 
-  let matchMedeia = gsap.matchMedia();
+
     useEffect(()=> {
       const familyName = familyNameRef.current.map(familyName => familyName.current);
       const firstName = firstNameRef.current.map(firstName => firstName.current);

@@ -10,11 +10,12 @@ export const ScrollArrow = () =>{
   let matchMedeia = gsap.matchMedia();
     useEffect(()=> {
       const scrollArrow = [triangleRef.current, arrowRef.current,  textRef.current]
+      
       gsap.timeline()
       .add(gsap.from(
         scrollArrow, {
           autoAlpha: 0,
-          delay: 2.5,
+          delay: 2.8,
           y: -20,
           ease: "power2.out",
           stagger:{
@@ -26,7 +27,7 @@ export const ScrollArrow = () =>{
       matchMedeia.add("(min-width: 769px)" , ()=>{
         gsap.fromTo(
           scrollArrowRef.current, {
-            delay: 3
+            delay: 3.5
           },{
             autoAlpha: 0,
             y: -100,
@@ -35,7 +36,7 @@ export const ScrollArrow = () =>{
             scrollTrigger:{
               start:'top 60%',
               trigger: scrollArrowRef.current,
-              markers:true
+              // markers:true
             },
           }
         )
@@ -44,7 +45,7 @@ export const ScrollArrow = () =>{
       matchMedeia.add("(max-width: 768px)" , ()=>{
         gsap.fromTo(
         scrollArrowRef.current, {
-          delay: 3,
+          delay: 3.5,
         },{
           autoAlpha: 0,
           y: -100,
@@ -53,7 +54,7 @@ export const ScrollArrow = () =>{
           scrollTrigger:{
             start:'top 70%',
             trigger: scrollArrowRef.current,
-            markers:true,
+            // markers:true,
           },
         }
       )

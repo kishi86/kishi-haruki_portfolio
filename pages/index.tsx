@@ -26,7 +26,7 @@ export const Index = () => {
   useEffect(() => {
     gsap.from(backGroundRef.current,{
       autoAlpha:0,
-      delay:3.8,
+      delay:4.2,
       duration:1
     })
 

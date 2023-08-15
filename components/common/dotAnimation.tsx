@@ -31,8 +31,6 @@ export const DotAnimation = () => {
     p5.colorMode(p5.RGB, p5.width, p5.height, 100);
     circles.forEach((circle)=>circle.kill())
     circleLocation(p5);
-    // console.log("wid",window.innerWidth);
-    // console.log("p5wid",p5.windowWidth);
   };
 
   const draw = (p5: p5Types) => {
@@ -49,6 +47,7 @@ export const DotAnimation = () => {
     }
 
     // 円
+    
     for (let i=0; i<circles.length; i++) {
       circles[i].draw(p5, gridSize);
     }
