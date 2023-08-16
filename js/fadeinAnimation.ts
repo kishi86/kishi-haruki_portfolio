@@ -23,7 +23,7 @@ export function scrollTriggerAnimation(
     scrollTrigger:{
       trigger: target,
       start: start,
-      markers: true,
+      // markers: true,
     }
   })
 }
