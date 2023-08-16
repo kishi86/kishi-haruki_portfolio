@@ -15,7 +15,7 @@ import React,{Ref, useEffect,useRef} from "react"
 import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
 
-import {WorksItem1} from "@/interface/worksAllText"
+import { WorksItem1 } from "@/interface/worksAllText"
 
 const data = WorksItem1;
 const WorksPreviewDataProps:WorksPreviewDataProps = {

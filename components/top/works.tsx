@@ -3,13 +3,15 @@ import React,{RefObject, createRef, useEffect,useRef} from "react"
 import gsap  from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link"
+import ItemA from "@/components/common/works_items/itemA"
+import Item0 from "@/components/common/works_items/item0"
 import Item1 from "@/components/common/works_items/item1"
 import Item2 from "@/components/common/works_items/item2"
 import Item3 from "@/components/common/works_items/item3"
-import Item4 from "../common/works_items/item4"
-import ItemA from "@/components/common/works_items/itemA"
-import Item5 from "../common/works_items/item5"
-import Item0 from "../common/works_items/item0"
+import Item4 from "@/components/common/works_items/item4"
+import Item5 from "@/components/common/works_items/item5"
+
+import { scrollTriggerAnimation } from "@/js/fadeinAnimation"
 // import gsap from "gsap/gsap-core";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,40 +30,26 @@ export const Works = () =>{
     createRef()
   ]);
 
+
   useEffect(()=> {
     const item = itemRef.current.map(item => item.current);
     const worksSectionElements = [worksSectionRef.current,sectionTitleRef.current]
-
-    gsap.fromTo(worksSectionElements,{
-      autoAlpha: 0,
-      y: 40
-    },{
-      autoAlpha: 1,
-      y: 0,
-      duration: 1,
-      ease: "power4.out",
-      scrollTrigger:{
-        trigger: sectionTitleRef.current,
-        start:'top 80%',
-        // markers: true,
-        }
-    }
+    scrollTriggerAnimation(
+      worksSectionElements,
+      40,
+      1,
+      0,
+      "top 80%"
     )
+    
     item.forEach((item)=>{
-      gsap.fromTo(item,{
-        autoAlpha: 0,
-        y: 60
-      },{
-        autoAlpha: 1,
-        y: 0,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger:{
-          trigger: item,
-          start:'top 75%',
-          markers: true,
-        }
-      })
+      scrollTriggerAnimation(
+        item,
+        40,
+        1,
+        0,
+        "top 75%"
+      )
     })
     
 

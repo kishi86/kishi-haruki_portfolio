@@ -9,22 +9,22 @@ export const SelfIntroduction = () =>{
     gsap.fromTo(
       titleRef.current,{
         autoAlpha: 0,
-        y:40
+        y:20
       },{
         autoAlpha: 1,
         y: 0,
-        duration:0.8,
+        duration:0.5,
         delay:0.2,
         ease:"Power4.Out"
       })
     gsap.fromTo(
       introductionRef.current,{
         autoAlpha: 0,
-        y:40
+        y:20
       },{
         autoAlpha: 1,
         y: 0,
-        duration:0.8,
+        duration:0.5,
         delay:1,
         ease:"Power4.Out"
     })

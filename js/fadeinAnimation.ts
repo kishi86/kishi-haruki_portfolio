@@ -3,10 +3,12 @@ import gsap  from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-export function scrollShowAnimation(
+export function scrollTriggerAnimation(
   target: any,
   fromY: number,
-  duration: number
+  duration: number,
+  delay: number,
+  start: string
 )
 {
   gsap.fromTo(target,{
@@ -17,9 +19,10 @@ export function scrollShowAnimation(
     y: 0,
     duration: duration,
     ease:  "power4.out",
+    delay: delay,
     scrollTrigger:{
       trigger: target,
-      start:'top 75%',
+      start: start,
       markers: true,
     }
   })

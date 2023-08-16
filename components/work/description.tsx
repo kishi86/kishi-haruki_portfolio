@@ -1,14 +1,28 @@
 import styles from "@/styles/works/description.module.scss"
 import { WorksDescriptionDataProps } from "@/interface/works";
+import { useEffect, useRef } from "react";
+import { scrollTriggerAnimation } from "@/js/fadeinAnimation";
 
 interface Props {
   data: WorksDescriptionDataProps
 }
 
 export const Description = ({data}: Props) =>{
+  let descriptionListRef = useRef<HTMLUListElement>(null)
+  let textRef = useRef<HTMLDivElement>(null)
+  useEffect(() =>{
+    const descriptions = [ descriptionListRef.current , textRef.current ]
+    scrollTriggerAnimation(
+      descriptions,
+      40,
+      1,
+      0,
+      "top 75%"
+    )
+  })
   return(
-    <section className={styles.description}>
-        <ul className={styles.description_list}>
+    <section className={styles.description} >
+        <ul className={styles.description_list} ref={descriptionListRef}>
           <li className={styles.description_item}>
             <h3>カテゴリ</h3>
             <p>{data.category}</p>
@@ -30,8 +44,9 @@ export const Description = ({data}: Props) =>{
         <div
          className={styles.description_text}
          dangerouslySetInnerHTML={{__html: data.productionSummary}}
-        >
-        </div>
+         ref={textRef}
+        />
+        
       </section>
   )
 }

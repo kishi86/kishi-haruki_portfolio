@@ -1,6 +1,8 @@
 import styles from "@/styles/works/detail.module.scss";
 import { WorksDetailDataProps } from "@/interface/works";
-import { useEffect, useRef } from "react";
+import { RefObject, createRef, use, useEffect, useRef } from "react";
+import { scrollTriggerAnimation } from "@/js/fadeinAnimation";
+import gsap  from 'gsap'
 
 
 interface Props {
@@ -8,15 +10,45 @@ interface Props {
 }
 
 export const Detail = ({data}: Props) =>{
-  
+  let titleRef = useRef<HTMLHeadingElement>(null)
+  let picturesListRef = useRef<RefObject<HTMLLIElement>[]>([
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef()
+  ])
+
+  useEffect(()=>{
+    const picturesList = picturesListRef.current.map( picturesList => picturesList.current)
+    
+    gsap.fromTo(titleRef.current,{
+      autoAlpha: 0,
+      y: 20
+    },{
+      autoAlpha: 1,
+      y: 0,
+      duration:0.5,
+      ease:"Power4.Out"
+    })
+    picturesList.forEach((picturesList)=>{
+      scrollTriggerAnimation(
+        picturesList,
+        20,
+        1,
+        0.8,
+        "top 80%"
+      )
+    })
+  })
   return(
     <section className = {styles.worksDetail}>
-        {/* <h1>フリーペーパー　もじよみ</h1> */}
-        <h1>{data.title}</h1>
+        <h1 ref={titleRef}>{data.title}</h1>
         <ul className={styles.pictures_list}>
           {data.picturesList.map((imgPath: string, index: number)=>{
             return (
-              <li className={styles.pictures}>
+              <li className={styles.pictures} ref={picturesListRef.current[index]}>
                 <img src={imgPath} alt="" />
               </li>
             )

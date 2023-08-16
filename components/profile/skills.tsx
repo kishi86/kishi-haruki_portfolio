@@ -2,7 +2,7 @@ import gsap  from 'gsap'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "@/styles/profile/skills.module.scss"
 import { RefObject, createRef, useEffect, useRef } from "react";
-import { scrollShowAnimation } from "@/js/fadeinAnimation"
+import { scrollTriggerAnimation } from "@/js/fadeinAnimation"
 gsap.registerPlugin(ScrollTrigger);
 
 export const Skills = () =>{
@@ -24,27 +24,30 @@ export const Skills = () =>{
   useEffect(()=> {
     const listTitle = listTitleRef.current.map(listTitle => listTitle.current);
     const list = listRef.current.map(list => list.current);
-
-    gsap.fromTo(sectionTitleRef.current,{
-      autoAlpha: 0,
-      y: 40
-    },{
-      autoAlpha: 1,
-      y: 0,
-      duration: 1,
-      ease: "power4.out",
-      scrollTrigger:{
-        trigger: sectionTitleRef.current,
-        start:'top 80%',
-        markers: true
-      }
-    })
+    const skills = [listTitle,list]
+    scrollTriggerAnimation(
+      sectionTitleRef.current,
+      40,
+      1,
+      0,
+      "top 80%")
 
     listTitle.forEach(listTitle => {
-      scrollShowAnimation(listTitle,40,1);
+      scrollTriggerAnimation(
+        listTitle,
+        20,
+        1,
+        0,
+        "top 75%");
     })
+
     list.forEach(list =>{
-      scrollShowAnimation(list,40,1)
+      scrollTriggerAnimation(
+        list,
+        20,
+        1,
+        0,
+        "top 75%")
     })
   })
 
