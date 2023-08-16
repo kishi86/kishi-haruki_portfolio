@@ -1,12 +1,59 @@
+import gsap  from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "@/styles/profile/skills.module.scss"
+import { RefObject, createRef, useEffect, useRef } from "react";
+import { scrollShowAnimation } from "@/js/fadeinAnimation"
+gsap.registerPlugin(ScrollTrigger);
 
 export const Skills = () =>{
+  let sectionTitleRef = useRef<HTMLHeadingElement>(null);
+  let listTitleRef = useRef<RefObject<HTMLHeadingElement>[]>([
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef()
+  ])
+  let listRef = useRef<RefObject<HTMLUListElement>[]>([
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef(),
+    createRef(),
+  ]);
+  useEffect(()=> {
+    const listTitle = listTitleRef.current.map(listTitle => listTitle.current);
+    const list = listRef.current.map(list => list.current);
+
+    gsap.fromTo(sectionTitleRef.current,{
+      autoAlpha: 0,
+      y: 40
+    },{
+      autoAlpha: 1,
+      y: 0,
+      duration: 1,
+      ease: "power4.out",
+      scrollTrigger:{
+        trigger: sectionTitleRef.current,
+        start:'top 80%',
+        markers: true
+      }
+    })
+
+    listTitle.forEach(listTitle => {
+      scrollShowAnimation(listTitle,40,1);
+    })
+    list.forEach(list =>{
+      scrollShowAnimation(list,40,1)
+    })
+  })
+
   return(
     <section className={styles.skills}>
-        <h2>Skills</h2>
-        <h3>グラフィック系</h3>
-        <ul className={styles.skill_list}>
-          <li className={styles.skill_item}>
+        <h2 ref={sectionTitleRef}>Skills</h2>
+        <h3 ref={listTitleRef.current[0]}>グラフィック系</h3>
+        <ul className={styles.skill_list} ref={listRef.current[0]}>
+          <li className={styles.skill_item} >
             <img src="../images/profile/skill_icon/ai.svg" alt="" />
             <div className={styles.skill_description}>
               <h4>Illustrator</h4>
@@ -30,8 +77,8 @@ export const Skills = () =>{
           </li> */}
         </ul>
 
-        <h3>Web系</h3>
-        <ul className={styles.skill_list}>
+        <h3 ref={listTitleRef.current[1]}>Web系</h3>
+        <ul className={styles.skill_list} ref={listRef.current[1]}>
           <li className={styles.skill_item}>
             <img src="../images/profile/skill_icon/xd.svg" alt="" />
             <div className={styles.skill_description}>
@@ -66,8 +113,8 @@ export const Skills = () =>{
           </li>
         </ul>
 
-        <h3>開発系</h3>
-        <ul className={styles.skill_list}>
+        <h3 ref={listTitleRef.current[2]}>開発系</h3>
+        <ul className={styles.skill_list} ref={listRef.current[2]}>
           <li className={styles.skill_item}>
             <img src="../images/profile/skill_icon/touchDesigner.svg" alt="" />
             <div className={styles.skill_description}>
@@ -86,8 +133,8 @@ export const Skills = () =>{
           </li>
         </ul>
 
-        <h3>映像系</h3>
-        <ul className={styles.skill_list}>
+        <h3 ref={listTitleRef.current[3]}>映像系</h3>
+        <ul className={styles.skill_list} ref={listRef.current[3]}>
           <li className={styles.skill_item}>
             <img src="../images/profile/skill_icon/pr.svg" alt="" />
             <div className={styles.skill_description}>
@@ -106,8 +153,8 @@ export const Skills = () =>{
           </li>
         </ul>
 
-        <h3>3D系</h3>
-        <ul className={styles.skill_list}>
+        <h3 ref={listTitleRef.current[4]}>3D系</h3>
+        <ul className={styles.skill_list} ref={listRef.current[4]}>
           <li className={styles.skill_item}>
             <img src="../images/profile/skill_icon/blender.svg" alt="" />
             <div className={styles.skill_description}>

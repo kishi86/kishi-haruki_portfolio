@@ -6,21 +6,27 @@ export const SelfIntroduction = () =>{
   const titleRef = useRef<HTMLHeadingElement>(null);
   const introductionRef = useRef<HTMLParagraphElement>(null);
   useEffect(()=> {
-    gsap.to(
+    gsap.fromTo(
       titleRef.current,{
-        opacity:1,
-        y:-20,
-        duration:1,
+        autoAlpha: 0,
+        y:40
+      },{
+        autoAlpha: 1,
+        y: 0,
+        duration:0.8,
         delay:0.2,
-        ease:"Power3.easeOut"
+        ease:"Power4.Out"
       })
-    gsap.to(
+    gsap.fromTo(
       introductionRef.current,{
-        opacity:1,
-        y:-20,
-        duration:1,
+        autoAlpha: 0,
+        y:40
+      },{
+        autoAlpha: 1,
+        y: 0,
+        duration:0.8,
         delay:1,
-        ease:"Power3.easeOut"
+        ease:"Power4.Out"
     })
   },[])
 

@@ -42,8 +42,8 @@ export const Works = () =>{
       ease: "power4.out",
       scrollTrigger:{
         trigger: sectionTitleRef.current,
-        start:'top 90%',
-        markers: true,
+        start:'top 80%',
+        // markers: true,
         }
     }
     )
@@ -64,17 +64,6 @@ export const Works = () =>{
       })
     })
     
-    
-    
-    // gsap.fromTo(items,{
-    //   autoAlpha:0
-    // },{
-    //   autoAlpha:1,
-    //   scrollTrigger:{
-    //     trigger :sectionTitleRef.current,
-    //     start: 'top 75%'
-    //   }
-    // })
 
   })
   return(

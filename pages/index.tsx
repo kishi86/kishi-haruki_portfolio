@@ -40,7 +40,8 @@ export const Index = () => {
   const scroll = (event:Event)=>{
     scrollAfter = window.scrollY;
     windowHeight = window.innerHeight;
-    onScroll(contactRef,navigationRef,scrollAfter,scrollBefore);scrollBefore = scrollAfter;
+    onScroll(contactRef,navigationRef,scrollAfter,scrollBefore);
+    scrollBefore = scrollAfter;
   }
 
   return (

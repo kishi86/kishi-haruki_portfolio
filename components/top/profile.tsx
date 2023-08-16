@@ -16,12 +16,12 @@ export const Profile = () =>{
     gsap.fromTo(
       ProfileSectionRef.current, {
         autoAlpha: 0,
-        y:120,
+        y:100,
       }
       ,{
         autoAlpha:1,
         y: 0,
-        duration: 1.5,
+        duration: 1.2,
         ease: "power4.out",
         scrollTrigger:{
           start:'top 75%',
