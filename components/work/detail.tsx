@@ -29,7 +29,7 @@ export const Detail = ({data}: Props) =>{
     },{
       autoAlpha: 1,
       y: 0,
-      duration:0.5,
+      duration:0.8,
       ease:"Power4.Out"
     })
     picturesList.forEach((picturesList)=>{

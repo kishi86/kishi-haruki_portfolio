@@ -9,8 +9,7 @@ export function scrollTriggerAnimation(
   duration: number,
   delay: number,
   start: string
-)
-{
+){
   gsap.fromTo(target,{
     autoAlpha: 0,
     y: fromY
@@ -22,7 +21,7 @@ export function scrollTriggerAnimation(
     delay: delay,
     scrollTrigger:{
       trigger: target,
-      start: start,
+      start: start
       // markers: true,
     }
   })

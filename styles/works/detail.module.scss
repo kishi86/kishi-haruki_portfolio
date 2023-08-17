@@ -3,11 +3,11 @@
   display: flex;
   flex-flow: column;
   background-color: #ffffff;
-  padding: 128px $side_padding 5vmax $side_padding;
+  padding: 12vh $side_padding 5vmax $side_padding;
   h1{
     font-weight: $semi-bold;
     // font-size: 18pt;
-    font-size: $regular-font;
+    font-size: 1.5vmax;
     margin-bottom: 1.5em;
   }
   .pictures_list{
@@ -22,10 +22,10 @@
       width: 100%;
       img{
         position: absolute;
-        height: 80%;
-        width: 80%;
-        top: calc( 50% - 80%/2);
-        left: calc( 50% - 80%/2);
+        height: 86%;
+        width: 86%;
+        top: calc( 50% - 86%/2);
+        left: calc( 50% - 86%/2);
         object-fit: contain;
       }
     }
@@ -33,7 +33,10 @@
 }
 
 @media screen and (max-width:$blake-point) {
-  .worksDetail h1{
-    font-size: $regular-font-s;
+  .worksDetail {
+    padding-top: 8vh;
+    h1{
+      font-size: $regular-font-s;
+    }
   }
 }
