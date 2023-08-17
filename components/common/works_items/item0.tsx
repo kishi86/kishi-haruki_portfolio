@@ -1,6 +1,6 @@
 import Link from "next/link"
 import styles from "@/styles/common/hoverThumbnail.module.scss"
-import {WorksItem0} from "@/interface/worksAllText"
+import { WorksItem0 } from "@/interface/worksAllText"
 const data = WorksItem0;
 
 export const Item0 = () =>{
@@ -12,7 +12,7 @@ export const Item0 = () =>{
             <div className={styles.works_title}>
               <h3>{data.title}</h3>
               <p>
-                {data.category} / {data.productionTime} / {data.productionPart}
+                {data.category} / {data.productionPart}
               </p>
             </div>
           </div>

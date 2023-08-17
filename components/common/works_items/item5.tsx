@@ -1,9 +1,9 @@
 import Link from "next/link"
 import styles from "@/styles/common/hoverThumbnail.module.scss"
-import {WorksItem5} from "@/interface/worksAllText"
+import { WorksItem5 } from "@/interface/worksAllText"
 const data = WorksItem5;
 
-export const Item5WorksItem5 = () =>{
+export const Item5 = () =>{
   return(
     <div className={styles.works_item}>
         <Link href={data.linkTo}>
@@ -12,7 +12,7 @@ export const Item5WorksItem5 = () =>{
             <div className={styles.works_title}>
               <h3>{data.title}</h3>
               <p>
-                {data.category} / {data.productionTime} / {data.productionPart}
+                {data.category} / {data.productionPart}
               </p>
             </div>
           </div>
@@ -22,4 +22,4 @@ export const Item5WorksItem5 = () =>{
   
 }
 
-export default Item5WorksItem5;
+export default Item5;

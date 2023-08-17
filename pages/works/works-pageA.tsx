@@ -4,6 +4,7 @@ import Contact from "@/components/common/footer"
 
 import Item0 from "@/components/common/works_items/item0"
 import ItemA from "@/components/common/works_items/itemA"
+import Item1 from "@/components/common/works_items/item1"
 import { WorksDescriptionDataProps, WorksDetailDataProps, WorksPreviewDataProps} from "@/interface/works"
 
 import Detail from "@/components/work/detail"
@@ -18,10 +19,11 @@ import Link from "next/link"
 import {WorksItemA} from "@/interface/worksAllText"
 
 
+
 const data = WorksItemA;
 const WorksPreviewDataProps:WorksPreviewDataProps = {
-  preview1:<ItemA />,
-  preview2:<Item0 />
+  preview1:<Item0 />,
+  preview2:<Item1 />
 }
 
 const worksDetailData:WorksDetailDataProps = {

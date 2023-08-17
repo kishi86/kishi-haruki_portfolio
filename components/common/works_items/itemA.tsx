@@ -12,7 +12,7 @@ export const ItemA = () =>{
             <div className={styles.works_title}>
               <h3>{data.title}</h3>
               <p>
-                {data.category} / {data.productionTime} / {data.productionPart}
+                {data.category} / {data.productionPart}
               </p>
             </div>
           </div>

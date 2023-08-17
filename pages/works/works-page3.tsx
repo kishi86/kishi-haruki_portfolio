@@ -2,7 +2,7 @@ import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
 import Item4 from "@/components/common/works_items/item4"
-import Item5 from "@/components/common/works_items/item4"
+import Item5 from "@/components/common/works_items/item5"
 
 import { WorksDescriptionDataProps, WorksDetailDataProps, WorksPreviewDataProps} from "@/interface/works"
 
@@ -16,6 +16,7 @@ import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
 
 import {WorksItem3} from "@/interface/worksAllText"
+import ItemA from "@/components/common/works_items/itemA"
 
 
 const data = WorksItem3;
