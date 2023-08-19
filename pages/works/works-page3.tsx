@@ -20,7 +20,7 @@ import ItemA from "@/components/common/works_items/itemA"
 
 
 const data = WorksItem3;
-const WorksPreviewDataProps:WorksPreviewDataProps = {
+const WorksPreviewData:WorksPreviewDataProps = {
   preview1:<Item4 />,
   preview2:<Item5 />
 }
@@ -78,7 +78,7 @@ export const WorksPage = () => {
     <main>
       <Detail data={worksDetailData}/>
       <Description data={worksDescriptionData} />
-      <Preview data={WorksPreviewDataProps}/>
+      <Preview data={WorksPreviewData}/>
     </main>
     
     <div ref={contactRef} id="contact">

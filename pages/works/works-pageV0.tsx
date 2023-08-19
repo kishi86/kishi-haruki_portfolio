@@ -2,9 +2,9 @@ import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
 
-import Item5 from "@/components/common/works_items/item4"
+import Item0 from "@/components/common/works_items/item0"
 import ItemA from "@/components/common/works_items/itemA"
-import { WorksDescriptionDataProps, WorksDetailDataProps, WorksPreviewDataProps} from "@/interface/works"
+import { WorksDescriptionDataProps, WorksDetailDataProps, WorksPreviewDataProps, WorksVideoDataProps} from "@/interface/works"
 
 import Detail from "@/components/work/detail"
 import Description from "@/components/work/description"
@@ -15,20 +15,27 @@ import React,{Ref, useEffect,useRef} from "react"
 import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
 
-import {WorksItem4} from "@/interface/worksAllText"
+import {WorksItemV0} from "@/interface/worksAllText"
+import DetailVideoIn from "@/components/work/detailVideoIn"
+import { Video_penguin } from "@/js/video";
 
-
-const data = WorksItem4;
+const data = WorksItemV0;
 const WorksPreviewData:WorksPreviewDataProps = {
-  preview1:<Item5 />,
-  preview2:<ItemA />
+  preview1:<ItemA />,
+  preview2:<Item0 />
 }
 
-const worksDetailData:WorksDetailDataProps = {
+const WorksVideoData:WorksVideoDataProps = {
   title: data.title,
-  picturesList: data.picturesList
-
+  picturesList: data.picturesList,
+  video:<Video_penguin />
 }
+
+// const worksDetailData:WorksDetailDataProps = {
+//   title: data.title,
+//   picturesList: data.picturesList
+// }
+
 const worksDescriptionData:WorksDescriptionDataProps = {
   category: data.category,
   productionTime: data.productionTime,
@@ -36,9 +43,6 @@ const worksDescriptionData:WorksDescriptionDataProps = {
   tool: data.tool,
   productionSummary: data.productionSummary
 }
-
-
-
 
 export const WorksPage = () => {
   let contactRef = useRef<HTMLDivElement>(null!);
@@ -48,13 +52,7 @@ export const WorksPage = () => {
 
   useEffect(() => {
     window.addEventListener("scroll",scroll);
-    // for(let i=0; i<worksDetailData.picturesList.length; i++){
-    //   console.log(document);
-    //   pictures = document.createElement('li');
-    //   pictures.innerHTML = "<img src=" + worksDetailData.picturesList[i] + ">";
-    //   (document.getElementById('pictures_list') as HTMLUListElement).appendChild(pictures);
-    // }
-  
+    
     return()=>{
       window.removeEventListener("scroll",scroll);
     }
@@ -75,7 +73,7 @@ export const WorksPage = () => {
     </div>
     
     <main>
-      <Detail data={worksDetailData}/>
+      <DetailVideoIn data={WorksVideoData}/>
       <Description data={worksDescriptionData} />
       <Preview data={WorksPreviewData}/>
     </main>

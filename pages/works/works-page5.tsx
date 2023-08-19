@@ -19,7 +19,7 @@ import {WorksItem5} from "@/interface/worksAllText"
 
 
 const data = WorksItem5;
-const WorksPreviewDataProps:WorksPreviewDataProps = {
+const WorksPreviewData:WorksPreviewDataProps = {
   preview1:<ItemA />,
   preview2:<Item0 />
 }
@@ -77,7 +77,7 @@ export const WorksPage = () => {
     <main>
       <Detail data={worksDetailData}/>
       <Description data={worksDescriptionData} />
-      <Preview data={WorksPreviewDataProps}/>
+      <Preview data={WorksPreviewData}/>
     </main>
     
     <div ref={contactRef} id="contact">

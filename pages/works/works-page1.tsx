@@ -18,7 +18,7 @@ import Link from "next/link"
 import { WorksItem1 } from "@/interface/worksAllText"
 
 const data = WorksItem1;
-const WorksPreviewDataProps:WorksPreviewDataProps = {
+const WorksPreviewData:WorksPreviewDataProps = {
   preview1:<Item2 />,
   preview2:<Item3 />
 }
@@ -76,7 +76,7 @@ export const WorksPage = () => {
     <main>
       <Detail data={worksDetailData}/>
       <Description data={worksDescriptionData} />
-      <Preview data={WorksPreviewDataProps}/>
+      <Preview data={WorksPreviewData}/>
     </main>
     
     <div ref={contactRef} id="contact">

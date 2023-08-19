@@ -1,0 +1,16 @@
+@import "../common";
+.videoContainer{
+  position: relative;
+  height: calc(90vw * 0.6);
+  width: 100%;
+  background-color: $blue-green;
+  padding-top: 56.25%;
+  .video{
+    background-color: $blue;
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 86%;
+      height: 86%;
+  }
+}

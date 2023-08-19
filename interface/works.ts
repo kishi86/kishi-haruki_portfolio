@@ -12,6 +12,11 @@ export interface WorksDetailDataProps {
   title: string;
   picturesList: string[];
 }
+export interface WorksVideoDataProps {
+  title: string;
+  picturesList: string[];
+  video: JSX.Element;
+}
 
 export interface WorksPreviewDataProps {
   preview1:JSX.Element;

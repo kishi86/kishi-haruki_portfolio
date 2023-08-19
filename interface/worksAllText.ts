@@ -1,21 +1,45 @@
 import { HtmlProps } from "next/dist/shared/lib/html-context";
+export const WorksItem6 = {
+  title:"専攻コース　前期展ポスター",
+  category: "グラフィックデザイン",
+  productionTime: "約１０時間",
+  productionPart:"デザイン",
+  tool:"Illustrator",
+
+  // サムネイル
+  linkTo:  "/works/works-page6",
+  previewImage:  "../poster_2/cover_d.jpg",
+
+  // ページ
+  picturesList : [
+    "../poster_2/0_d.jpg",
+
+  ],
+  productionSummary:
+    "<p>\
+      自身が在籍する、大阪芸術大学短期大学部アートサイエンスコースの前期展のために制作したポスターです。初めて本格的に作品を作り、展示を形にするまでの不安や迷いと、そこから生まれる作品の美しさを揺らぐ曲線で表現しました。\
+    </p>"
+}
+
 export const WorksItem5 = {
   title:"コーヒーとはちみつのギフトボックス",
   category: "ブランディング",
   productionTime: "約２０時間",
-  productionPart:"企画、デザイン",
+  productionPart:"企画、デザイン、制作",
   tool:"Illustrator、Photoshop",
 
   // サムネイル
   linkTo:  "/works/works-page5",
-  previewImage:  "../05package/00.jpg",
+  previewImage:  "../branding/0.jpg",
 
   // ページ
   picturesList : [
-    "../05package/00.jpg",
-    "../05package/01.jpg",
-    "../05package/02.jpg",
-    "../05package/03.jpg"
+    "../branding/0.jpg",
+    "../branding/1.jpg",
+    "../branding/2.jpg",
+    "../branding/3.jpg",
+    "../branding/4.png",
+    "../branding/5.png",
   ],
   productionSummary:
     "<p>\
@@ -32,13 +56,12 @@ export const WorksItem4 = {
 
   // サムネイル
   linkTo:  "/works/works-page4",
-  previewImage:  "../04free_paper/00.png",
+  previewImage:  "../free_paper/cover.jpg",
 
   // ページ
   picturesList : [
-    "../04free_paper/00.png",
-    "../04free_paper/01.png",
-    "../04free_paper/03.png"
+    "../free_paper/0.jpg",
+    "../free_paper/1.jpg",
   ],
   productionSummary:
     "<p>\
@@ -63,11 +86,11 @@ export const WorksItem3 = {
 
   // サムネイル
   linkTo:  "/works/works-page3",
-  previewImage:  "../03poster/00.png",
+  previewImage:  "../poster_1/cover_g.jpg",
 
   // ページ
   picturesList : [
-    "../03poster/00.png",
+    "../poster_1/0_g.jpg",
   ],
   productionSummary:
     "<p>\
@@ -86,14 +109,15 @@ export const WorksItem2 = {
 
   // サムネイル
   linkTo:  "/works/works-page2",
-  previewImage:  "../02zine/01.jpg",
+  previewImage:  "../zine/0.jpg",
 
   // ページ
   picturesList : [
-    "../02zine/01.jpg",
-    "../02zine/02.jpg",
-    "../02zine/03.jpg",
-    "../02zine/04.jpg"
+    "../zine/0.jpg",
+    "../zine/1.jpg",
+    "../zine/2.jpg",
+    "../zine/3.jpg",
+    "../zine/4.jpg",
   ],
   productionSummary:
     "<p>\
@@ -111,11 +135,13 @@ export const WorksItem1 = {
 
   // サムネイル
   linkTo:  "/works/works-page1",
-  previewImage:  "../01cd_album/00.jpg",
+  previewImage:  "../cd/cover.jpg",
 
   // ページ
   picturesList : [
-    "../01cd_album/00.jpg"
+    "../cd/0.jpg",
+    "../cd/1.jpg",
+    "../cd/2.jpg",
   ],
   productionSummary:
     "<p>\
@@ -134,12 +160,12 @@ export const WorksItem0 = {
   
   // サムネイル
   linkTo:  "/works/works-page0",
-  previewImage:  "../00geitan_land/00.png",
+  previewImage:  "../art_flag/cover_b.jpg",
   
   // ページ
   picturesList : [
-    "../00geitan_land/00.png",
-    "../00geitan_land/01.png"
+    "../../art_flag/0_b.jpg",
+    "../../art_flag/1_b.jpg"
   ],
   productionSummary:
     "<p>\
@@ -149,6 +175,30 @@ export const WorksItem0 = {
     "
 }
 
+export const WorksItemV0= {
+  title: "ペンギンのアニメーション",
+  category: "２Dアニメーション",
+  productionTime: "１５時間",
+  productionPart:"映像制作",
+  tool:"Illustrator、AfterEffect",
+  
+  // サムネイル
+  linkTo:  "/works/works-pageV0",
+  previewImage:  "../a_blender/01.png",
+  
+  // ページ
+  picturesList : [
+    "../a_blender/00.jpg",
+    "../a_blender/01.png",
+    "../a_blender/02.png",
+    "../a_blender/03.png",
+  ],
+  productionSummary:
+    "<p>\
+      blenderの習作です。\
+    </p>\
+    "
+}
 export const WorksItemA= {
   title: "blender習作",
   category: "３Dモデリング",
@@ -173,3 +223,5 @@ export const WorksItemA= {
     </p>\
     "
 }
+
+

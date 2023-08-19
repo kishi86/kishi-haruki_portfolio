@@ -10,8 +10,10 @@ import Item2 from "@/components/common/works_items/item2"
 import Item3 from "@/components/common/works_items/item3"
 import Item4 from "@/components/common/works_items/item4"
 import Item5 from "@/components/common/works_items/item5"
-
+import Item6 from "../common/works_items/item6";
 import { scrollTriggerAnimation } from "@/js/fadeinAnimation"
+import ItemV0 from "../common/works_items/itemV0";
+
 // import gsap from "gsap/gsap-core";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,6 +23,8 @@ export const Works = () =>{
   let sectionTitleRef = useRef<HTMLHeadingElement>(null);
 
   let itemRef = useRef<RefObject<HTMLLIElement >[]>([
+    createRef(),
+    createRef(),
     createRef(),
     createRef(),
     createRef(),
@@ -58,13 +62,15 @@ export const Works = () =>{
     <section className={styles.works} ref={worksSectionRef}>
       <h2 ref={sectionTitleRef}>Works</h2>
       <ul className={styles.works_list}>
-        <li ref={itemRef.current[0]}><Item5 /></li>
-        <li ref={itemRef.current[1]}><Item4 /></li>
-        <li ref={itemRef.current[2]}><Item3 /></li>
-        <li ref={itemRef.current[3]}><Item2 /></li>
-        <li ref={itemRef.current[4]}><Item1 /></li>
-        <li ref={itemRef.current[5]}><Item0 /></li>
-        <li ref={itemRef.current[6]}><ItemA /></li>
+        <li ref={itemRef.current[0]}><Item6 /></li>
+        <li ref={itemRef.current[1]}><Item5 /></li>
+        <li ref={itemRef.current[2]}><Item4 /></li>
+        <li ref={itemRef.current[3]}><Item3 /></li>
+        <li ref={itemRef.current[4]}><Item2 /></li>
+        <li ref={itemRef.current[5]}><Item1 /></li>
+        <li ref={itemRef.current[6]}><Item0 /></li>
+        <li ref={itemRef.current[7]}><ItemV0 /></li>
+        <li ref={itemRef.current[8]}><ItemA /></li>
       </ul>
     </section>
   )
