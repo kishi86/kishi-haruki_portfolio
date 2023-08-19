@@ -13,6 +13,7 @@ import Item5 from "@/components/common/works_items/item5"
 import Item6 from "../common/works_items/item6";
 import { scrollTriggerAnimation } from "@/js/fadeinAnimation"
 import ItemV0 from "../common/works_items/itemV0";
+import ItemV1 from "../common/works_items/itemV1";
 
 // import gsap from "gsap/gsap-core";
 
@@ -23,6 +24,8 @@ export const Works = () =>{
   let sectionTitleRef = useRef<HTMLHeadingElement>(null);
 
   let itemRef = useRef<RefObject<HTMLLIElement >[]>([
+    createRef(),
+    createRef(),
     createRef(),
     createRef(),
     createRef(),
@@ -69,8 +72,9 @@ export const Works = () =>{
         <li ref={itemRef.current[4]}><Item2 /></li>
         <li ref={itemRef.current[5]}><Item1 /></li>
         <li ref={itemRef.current[6]}><Item0 /></li>
-        <li ref={itemRef.current[7]}><ItemV0 /></li>
-        <li ref={itemRef.current[8]}><ItemA /></li>
+        <li ref={itemRef.current[7]}><ItemV1 /></li>
+        <li ref={itemRef.current[8]}><ItemV0 /></li>
+        <li ref={itemRef.current[9]}><ItemA /></li>
       </ul>
     </section>
   )

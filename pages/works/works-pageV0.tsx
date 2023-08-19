@@ -18,10 +18,11 @@ import Link from "next/link"
 import {WorksItemV0} from "@/interface/worksAllText"
 import DetailVideoIn from "@/components/work/detailVideoIn"
 import { Video_penguin } from "@/js/video";
+import ItemV1 from "@/components/common/works_items/itemV1"
 
 const data = WorksItemV0;
 const WorksPreviewData:WorksPreviewDataProps = {
-  preview1:<ItemA />,
+  preview1:<ItemV1 />,
   preview2:<Item0 />
 }
 

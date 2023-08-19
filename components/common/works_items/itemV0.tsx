@@ -4,7 +4,7 @@ import { WorksItemV0 } from "@/interface/worksAllText"
 
 const data = WorksItemV0;
 
-export const Item6 = () =>{
+export const ItemV0 = () =>{
   return(
     <div className={styles.works_item}>
         <Link href={data.linkTo}>
@@ -23,4 +23,4 @@ export const Item6 = () =>{
   
 }
 
-export default Item6;
+export default ItemV0;

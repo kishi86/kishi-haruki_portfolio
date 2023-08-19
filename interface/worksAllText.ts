@@ -174,9 +174,30 @@ export const WorksItem0 = {
     </p>\
     "
 }
+export const WorksItemV1= {
+  title: "STUDIES　花火のモーショングラフィックス",
+  category: "２Dアニメーション",
+  productionTime: "２０時間",
+  productionPart: "映像制作",
+  tool:"Illustrator、AfterEffect、PremierePro",
+  
+  // サムネイル
+  linkTo:  "/works/works-pageV1",
+  previewImage:  "../hanabi/cover.jpg",
+  
+  // ページ
+  picturesList : [
+    
+  ],
+  productionSummary:
+    "<p>\
+      花火をモチーフとした２０秒のショートアニメーションです。花火玉の構造や打ち上げの要素を単純化し、モーショングラフィックスとして表現しました。\
+    </p>\
+    "
+}
 
 export const WorksItemV0= {
-  title: "ペンギンのアニメーション",
+  title: "STUDIES　ペンギンのアニメーション",
   category: "２Dアニメーション",
   productionTime: "１５時間",
   productionPart:"映像制作",
@@ -184,23 +205,21 @@ export const WorksItemV0= {
   
   // サムネイル
   linkTo:  "/works/works-pageV0",
-  previewImage:  "../a_blender/01.png",
+  previewImage:  "../penguin/cover.jpg",
   
   // ページ
   picturesList : [
-    "../a_blender/00.jpg",
-    "../a_blender/01.png",
-    "../a_blender/02.png",
-    "../a_blender/03.png",
+    
   ],
   productionSummary:
     "<p>\
-      blenderの習作です。\
+      授業課題として制作した、ペンギンをモチーフとした３０秒のショートアニメーションです。Illustratorでパーツごとに分けて作成したイラストにAfterEffectでモーションをつけました。\
     </p>\
     "
 }
+
 export const WorksItemA= {
-  title: "blender習作",
+  title: "STUDIES　blender習作",
   category: "３Dモデリング",
   productionTime: "それぞれ２〜３時間程度",
   productionPart:"ーー",

@@ -1,16 +1,16 @@
 @import "../common";
 .videoContainer{
-  position: relative;
-  height: calc(90vw * 0.6);
-  width: 100%;
-  background-color: $blue-green;
-  padding-top: 56.25%;
-  .video{
-    background-color: $blue;
+  position:relative;
+	width:100%;
+  height: 100%;
+  padding-top: calc( 315 / 560 * 100%);
+	// padding-top:56.25%;
+  // margin: calc(calc(56% - 86%/2)/2) 0;
+  iframe{
     position: absolute;
-      top: 0;
-      left: 0;
-      width: 86%;
-      height: 86%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

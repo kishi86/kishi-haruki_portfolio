@@ -20,7 +20,7 @@
       // height: 100vh;
       height: calc(90vw * 0.6);
       width: 100%;
-      img {
+      img , .video{
         position: absolute;
         height: 86%;
         width: 86%;
@@ -28,7 +28,9 @@
         left: calc( 50% - 86%/2);
         object-fit: contain;
       }
-      
+      // .video{
+      //   margin-top: calc(calc(50% - 86%/2)/2);
+      // }
     }
   }
 }

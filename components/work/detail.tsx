@@ -37,7 +37,7 @@ export const Detail = ({data}: Props) =>{
         picturesList,
         20,
         1,
-        0.8,
+        0.9,
         "top 80%"
       )
     })

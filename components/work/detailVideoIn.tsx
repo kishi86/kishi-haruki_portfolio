@@ -30,15 +30,27 @@ export const Detail = ({data}: Props) =>{
     },{
       autoAlpha: 1,
       y: 0,
-      duration:0.8,
-      ease:"Power4.Out"
+      duration: 0.8,
+      ease: "Power4.Out"
     })
+
+    gsap.fromTo(videoRef.current,{
+      autoAlpha: 0,
+      y: 20
+    },{
+      autoAlpha: 1,
+      y: 0,
+      duration: 1,
+      delay: 0.9,
+      ease: "Power4.Out",
+    })
+
     picturesList.forEach((picturesList)=>{
       scrollTriggerAnimation(
         picturesList,
         20,
         1,
-        0.8,
+        0.9,
         "top 80%"
       )
     })

@@ -17,13 +17,15 @@ import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
 
 import {WorksItemA} from "@/interface/worksAllText"
+import ItemV0 from "@/components/common/works_items/itemV0"
+import ItemV1 from "@/components/common/works_items/itemV1"
 
 
 
 const data = WorksItemA;
 const WorksPreviewDataProps:WorksPreviewDataProps = {
-  preview1:<Item0 />,
-  preview2:<Item1 />
+  preview1:<ItemV0 />,
+  preview2:<ItemV1 />
 }
 
 const worksDetailData:WorksDetailDataProps = {
