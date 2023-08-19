@@ -146,7 +146,9 @@ export const DotAnimation = () => {
         })
       })
     }
-    else{
+    else if(
+      (window.innerWidth<768)&&(window.innerWidth>200 && window.innerHeight>400)
+      ){
       for(let j = 0; j<circle_size_mini.length; j++){
       makeCircles(p5, circle_ratio_mini[j], circle_size_mini[j])
     }
