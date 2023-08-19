@@ -1,4 +1,30 @@
 import { HtmlProps } from "next/dist/shared/lib/html-context";
+export const WorksItem7 = {
+  title:"専攻コース前期展 rainiar",
+  category: "インスタレーション",
+  productionTime: "半年",
+  productionPart:"企画、制作、展示",
+  tool:"TouchDesigner",
+
+  // サムネイル
+  linkTo:  "/works/works-page7",
+  previewImage:  "../rainiar/cover.jpg",
+
+  // ページ
+  picturesList : [
+    "../rainiar/0.jpg",
+    "../rainiar/1.jpg",
+    "../rainiar/2.jpg",
+    "../rainiar/3.jpg",
+    "../rainiar/4.jpg",
+
+  ],
+  productionSummary:
+    "<p>\
+      雨をモチーフとしたインスタレーション作品です。体験者の行動によって時間の流れが変化するインタラクションを取り入れ、雨の日の緩やかな時の流れと、濡れた景色の色鮮やかさを表現しました。\
+    </p>"
+}
+
 export const WorksItem6 = {
   title:"専攻コース　前期展ポスター",
   category: "グラフィックデザイン",
@@ -174,6 +200,7 @@ export const WorksItem0 = {
     </p>\
     "
 }
+
 export const WorksItemV1= {
   title: "STUDIES　花火のモーショングラフィックス",
   category: "２Dアニメーション",

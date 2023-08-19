@@ -14,6 +14,7 @@ import Item6 from "../common/works_items/item6";
 import { scrollTriggerAnimation } from "@/js/fadeinAnimation"
 import ItemV0 from "../common/works_items/itemV0";
 import ItemV1 from "../common/works_items/itemV1";
+import Item7 from "../common/works_items/item7";
 
 // import gsap from "gsap/gsap-core";
 
@@ -29,6 +30,7 @@ export const Works = () =>{
     createRef(),
     createRef(),
     createRef(),
+
     createRef(),
     createRef(),
     createRef(),
@@ -65,16 +67,17 @@ export const Works = () =>{
     <section className={styles.works} ref={worksSectionRef}>
       <h2 ref={sectionTitleRef}>Works</h2>
       <ul className={styles.works_list}>
-        <li ref={itemRef.current[0]}><Item6 /></li>
-        <li ref={itemRef.current[1]}><Item5 /></li>
-        <li ref={itemRef.current[2]}><Item4 /></li>
-        <li ref={itemRef.current[3]}><Item3 /></li>
-        <li ref={itemRef.current[4]}><Item2 /></li>
-        <li ref={itemRef.current[5]}><Item1 /></li>
-        <li ref={itemRef.current[6]}><Item0 /></li>
-        <li ref={itemRef.current[7]}><ItemV1 /></li>
-        <li ref={itemRef.current[8]}><ItemV0 /></li>
-        <li ref={itemRef.current[9]}><ItemA /></li>
+        <li ref={itemRef.current[0]}><Item7 /></li>
+        <li ref={itemRef.current[1]}><Item6 /></li>
+        <li ref={itemRef.current[2]}><Item5 /></li>
+        <li ref={itemRef.current[3]}><Item4 /></li>
+        <li ref={itemRef.current[4]}><Item3 /></li>
+        <li ref={itemRef.current[5]}><Item2 /></li>
+        <li ref={itemRef.current[6]}><Item1 /></li>
+        <li ref={itemRef.current[7]}><Item0 /></li>
+        <li ref={itemRef.current[8]}><ItemV1 /></li>
+        <li ref={itemRef.current[9]}><ItemV0 /></li>
+        <li ref={itemRef.current[10]}><ItemA /></li>
       </ul>
     </section>
   )
