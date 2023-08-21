@@ -20,7 +20,7 @@ export const ScrollArrow = () =>{
         },{
           // y: 0,
           autoAlpha: 1,
-          delay: 3.5,
+          delay: 3.8,
           stagger:{
             each: 0.2,
           }

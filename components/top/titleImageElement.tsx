@@ -43,7 +43,7 @@ export const TitleImage = () =>{
 
       gsap.timeline()
       .add(gsap.fromTo(name,{
-        y: 22,
+        y: 20,
         autoAlpha: 0,
         opacity: 0,
       },{
