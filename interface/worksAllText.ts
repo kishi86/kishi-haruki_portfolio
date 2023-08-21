@@ -1,4 +1,7 @@
 import { HtmlProps } from "next/dist/shared/lib/html-context";
+const coverWidth:number = 1650
+const coverHeight:number = 960
+
 export const WorksItem7 = {
   title:"専攻コース前期展 rainiar",
   category: "インスタレーション",
@@ -8,15 +11,17 @@ export const WorksItem7 = {
 
   // サムネイル
   linkTo:  "/works/works-page7",
-  previewImage:  "../rainiar/cover.jpg",
-
+  previewImage:  "/rainiar/cover.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+  
   // ページ
   picturesList : [
-    "../rainiar/0.jpg",
-    "../rainiar/1.jpg",
-    "../rainiar/2.jpg",
-    "../rainiar/3.jpg",
-    "../rainiar/4.jpg",
+    "/rainiar/0.jpg",
+    "/rainiar/1.jpg",
+    "/rainiar/2.jpg",
+    "/rainiar/3.jpg",
+    "/rainiar/4.jpg",
 
   ],
   productionSummary:
@@ -34,11 +39,13 @@ export const WorksItem6 = {
 
   // サムネイル
   linkTo:  "/works/works-page6",
-  previewImage:  "../poster_2/cover_d.jpg",
-
+  previewImage:  "/poster_2/cover_d.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+  
   // ページ
   picturesList : [
-    "../poster_2/0_d.jpg",
+    "/poster_2/0_d.jpg",
 
   ],
   productionSummary:
@@ -56,16 +63,18 @@ export const WorksItem5 = {
 
   // サムネイル
   linkTo:  "/works/works-page5",
-  previewImage:  "../branding/0.jpg",
-
+  previewImage:  "/branding/0.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+  
   // ページ
   picturesList : [
-    "../branding/0.jpg",
-    "../branding/1.jpg",
-    "../branding/2.jpg",
-    "../branding/3.jpg",
-    "../branding/4.png",
-    "../branding/5.png",
+    "/branding/0.jpg",
+    "/branding/1.jpg",
+    "/branding/2.jpg",
+    "/branding/3.jpg",
+    "/branding/4.png",
+    "/branding/5.png",
   ],
   productionSummary:
     "<p>\
@@ -82,12 +91,14 @@ export const WorksItem4 = {
 
   // サムネイル
   linkTo:  "/works/works-page4",
-  previewImage:  "../free_paper/cover.jpg",
-
+  previewImage:  "/free_paper/cover.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+  
   // ページ
   picturesList : [
-    "../free_paper/0.jpg",
-    "../free_paper/1.jpg",
+    "/free_paper/0.jpg",
+    "/free_paper/1.jpg",
   ],
   productionSummary:
     "<p>\
@@ -112,11 +123,13 @@ export const WorksItem3 = {
 
   // サムネイル
   linkTo:  "/works/works-page3",
-  previewImage:  "../poster_1/cover_g.jpg",
-
+  previewImage:  "/poster_1/cover_g.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+  
   // ページ
   picturesList : [
-    "../poster_1/0_g.jpg",
+    "/poster_1/0_g.jpg",
   ],
   productionSummary:
     "<p>\
@@ -135,15 +148,17 @@ export const WorksItem2 = {
 
   // サムネイル
   linkTo:  "/works/works-page2",
-  previewImage:  "../zine/0.jpg",
-
+  previewImage:  "/zine/0.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+  
   // ページ
   picturesList : [
-    "../zine/0.jpg",
-    "../zine/1.jpg",
-    "../zine/2.jpg",
-    "../zine/3.jpg",
-    "../zine/4.jpg",
+    "/zine/0.jpg",
+    "/zine/1.jpg",
+    "/zine/2.jpg",
+    "/zine/3.jpg",
+    "/zine/4.jpg",
   ],
   productionSummary:
     "<p>\
@@ -161,13 +176,15 @@ export const WorksItem1 = {
 
   // サムネイル
   linkTo:  "/works/works-page1",
-  previewImage:  "../cd/cover.jpg",
+  previewImage:  "/cd/cover.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
 
   // ページ
   picturesList : [
-    "../cd/0.jpg",
-    "../cd/1.jpg",
-    "../cd/2.jpg",
+    "/cd/0.jpg",
+    "/cd/1.jpg",
+    "/cd/2.jpg",
   ],
   productionSummary:
     "<p>\
@@ -186,12 +203,14 @@ export const WorksItem0 = {
   
   // サムネイル
   linkTo:  "/works/works-page0",
-  previewImage:  "../art_flag/cover_b.jpg",
-  
+  previewImage:  "/art_flag/cover_b.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
+
   // ページ
   picturesList : [
-    "../../art_flag/0_b.jpg",
-    "../../art_flag/1_b.jpg"
+    "/art_flag/0_b.jpg",
+    "/art_flag/1_b.jpg"
   ],
   productionSummary:
     "<p>\
@@ -210,7 +229,9 @@ export const WorksItemV1= {
   
   // サムネイル
   linkTo:  "/works/works-pageV1",
-  previewImage:  "../hanabi/cover.jpg",
+  previewImage:  "/hanabi/cover.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
   
   // ページ
   picturesList : [
@@ -232,7 +253,9 @@ export const WorksItemV0= {
   
   // サムネイル
   linkTo:  "/works/works-pageV0",
-  previewImage:  "../penguin/cover.jpg",
+  previewImage:  "/penguin/cover.jpg",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
   
   // ページ
   picturesList : [
@@ -254,14 +277,16 @@ export const WorksItemA= {
   
   // サムネイル
   linkTo:  "/works/works-pageA",
-  previewImage:  "../a_blender/02.png",
+  previewImage:  "/a_blender/02.png",
+  coverWith: coverWidth,
+  coverHeight: coverHeight,
   
   // ページ
   picturesList : [
-    "../a_blender/00.jpg",
-    "../a_blender/01.png",
-    "../a_blender/02.png",
-    "../a_blender/03.png",
+    "/a_blender/00.jpg",
+    "/a_blender/01.png",
+    "/a_blender/02.png",
+    "/a_blender/03.png",
   ],
   productionSummary:
     "<p>\

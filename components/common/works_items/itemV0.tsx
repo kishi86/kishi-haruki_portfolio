@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 import styles from "@/styles/common/hoverThumbnail.module.scss"
 import { WorksItemV0 } from "@/interface/worksAllText"
 
@@ -9,7 +10,10 @@ export const ItemV0 = () =>{
     <div className={styles.works_item}>
         <Link href={data.linkTo}>
           <div className={styles.mask}>
-            <img src={data.previewImage} alt="" />
+            <Image src={data.previewImage}
+                alt={data.title}
+                width={data.coverWith}
+                height={data.coverHeight}/>
             <div className={styles.works_title}>
               <h3>{data.title}</h3>
               <p>
