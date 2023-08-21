@@ -2,6 +2,7 @@ import styles from "@/styles/works/detail.module.scss";
 import { WorksDetailDataProps } from "@/interface/works";
 import { RefObject, createRef, use, useEffect, useRef } from "react";
 import { scrollTriggerAnimation } from "@/js/fadeinAnimation";
+import Image from 'next/image'
 import gsap  from 'gsap'
 
 
@@ -50,7 +51,11 @@ export const Detail = ({data}: Props) =>{
           {data.picturesList.map((imgPath: string, index: number)=>{
             return (
               <li className={styles.pictures} ref={picturesListRef.current[index]}>
-                <img src={imgPath} alt="" />
+                <Image
+                  className={styles.images}
+                  src={imgPath}
+                  alt="" 
+                  fill/>
               </li>
             )
           })}
