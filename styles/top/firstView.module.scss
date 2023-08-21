@@ -5,8 +5,10 @@
   height: 100vh;
   width: auto;
   .title {
+    margin: 0;
     opacity: 1;
     display: flex;
+    width: 100%;
     justify-content: center;
     mix-blend-mode: overlay;
     padding-top: calc(50vh - 32vmax/2);

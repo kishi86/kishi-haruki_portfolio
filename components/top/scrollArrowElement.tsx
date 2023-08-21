@@ -12,12 +12,15 @@ export const ScrollArrow = () =>{
       const scrollArrow = [triangleRef.current, arrowRef.current,  textRef.current]
       
       gsap.timeline()
-      .add(gsap.from(
+      .add(gsap.fromTo(
         scrollArrow, {
           autoAlpha: 0,
-          delay: 2.8,
           y: -20,
           ease: "power2.out",
+        },{
+          y: 0,
+          autoAlpha: 1,
+          delay: 3.5,
           stagger:{
             each: 0.2,
           }

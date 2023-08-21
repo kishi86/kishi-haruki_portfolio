@@ -24,10 +24,13 @@ export const Index = () => {
   let windowHeight: number;
 
   useEffect(() => {
-    gsap.from(backGroundRef.current,{
+    gsap.fromTo(backGroundRef.current,{
       autoAlpha:0,
-      delay:4.2,
-      duration:1
+      
+    },{
+      autoAlpha: 1,
+      delay: 4.4,
+      duration: 1
     })
 
     window.addEventListener("scroll",scroll);

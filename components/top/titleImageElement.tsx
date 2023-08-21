@@ -32,6 +32,7 @@ export const TitleImage = () =>{
     createRef(),
     createRef()
   ]);
+  let maskRef = useRef<HTMLSpanElement>(null)
 
 
     useEffect(()=> {
@@ -41,20 +42,49 @@ export const TitleImage = () =>{
       const subTitle = subTitleRef.current.map(subTitle => subTitle.current);
 
       gsap.timeline()
-      .add(gsap.from(name,{
-        y: -20,
+      .add(gsap.fromTo(name,{
+        y: -22,
         autoAlpha: 0,
-        ease:'power1.out',
+        opacity: 0,
+      },{
+        y: 0,
+        autoAlpha: 1,
+        opacity: 1,
+        ease:"power1.out",
         stagger:{
-          each:0.18
+          each:0.2
         }
       }))
-      .add(gsap.from(subTitle,{
-        scaleX: 0,
-        x: -10,
+      .add(gsap.fromTo(maskRef.current,{
+        x:"-101%",
+      },{
+        x:"140%",
         duration: 1,
-        autoAlpha: 0,
+        ease: "power2.in",
       }))
+
+      gsap.fromTo(subTitle,{
+        autoAlpha: 0,
+      },{
+        autoAlpha: 1,
+        delay: 2.9,
+        ease: "power1.out",
+        stagger:{
+          each:0.06
+        }
+      })
+      // .add(gsap.fromTo(subTitle,{
+      //   scaleX: 0,
+      //   x: -10,
+      //   duration: 1.2,
+      //   autoAlpha: 0,
+      //   opacity: 0,
+      // },{
+      //   scaleX: 1,
+      //   x: 0,
+      //   autoAlpha: 1,
+      //   opacity: 1
+      // }))
     })
 
   return(
@@ -85,7 +115,9 @@ export const TitleImage = () =>{
         <img src="../images/top/title_images/name_i.svg" 
         ref={firstNameRef.current[5]}/>
       </div>
+      
       <div className={styles.sub_title}>
+        <span className={styles.mask} ref={maskRef}/>
         <img src="../images/top/title_images/sub_P.svg" 
         ref={subTitleRef.current[0]}/>
         <img src="../images/top/title_images/sub_O.svg" 

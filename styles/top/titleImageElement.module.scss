@@ -1,7 +1,6 @@
 @import "../common";
 .title{
   white-space: nowrap;
-
     // opacity: 1;
     // display: flex;
     // justify-content: center;
@@ -11,6 +10,7 @@
   img {
     display: inline;
     height: 10vmax;
+    opacity: 0;
   }
   .family_name{
     // padding-bottom: 34px;
@@ -59,6 +59,27 @@
     
   }
   .sub_title{
+    position: relative;
+    margin: 0;
+    height: 3.5vmax;
+    width: 40.2vmax;
+    overflow: hidden;
+    .mask{
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-color: #444444;
+      // background-image: linear-gradient(
+      //   to right,
+      //   #444444 50%,
+      //   #ffffff 50%
+      // );
+      width: 31.3vmax;
+      height: 3.5vmax;
+      transform: translateX(-101%);
+    }
+
     img{
       height: 2.5vmax;
       // padding-right: 24px;

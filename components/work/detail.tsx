@@ -22,14 +22,15 @@ export const Detail = ({data}: Props) =>{
 
   useEffect(()=>{
     const picturesList = picturesListRef.current.map( picturesList => picturesList.current)
-    
+  
     gsap.fromTo(titleRef.current,{
       autoAlpha: 0,
       y: 20
     },{
       autoAlpha: 1,
       y: 0,
-      duration:0.8,
+      delay: 0.1,
+      duration: 0.4,
       ease:"Power4.Out"
     })
     picturesList.forEach((picturesList)=>{
@@ -37,7 +38,7 @@ export const Detail = ({data}: Props) =>{
         picturesList,
         20,
         1,
-        0.9,
+        0,
         "top 80%"
       )
     })
