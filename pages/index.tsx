@@ -28,7 +28,7 @@ export const Index = () => {
     gsap.fromTo(backGroundRef.current,{
       autoAlpha:0,
     },{
-      autoAlpha: 0.9,
+      autoAlpha: 1,
       delay: 4.4,
       duration: 1
     })
