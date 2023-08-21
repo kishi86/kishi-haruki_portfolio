@@ -26,13 +26,11 @@ export const Index = () => {
   useEffect(() => {
     gsap.fromTo(backGroundRef.current,{
       autoAlpha:0,
-      
     },{
-      autoAlpha: 1,
+      autoAlpha: 0.9,
       delay: 4.4,
       duration: 1
     })
-
     window.addEventListener("scroll",scroll);
     return()=>{
       window.removeEventListener("scroll",scroll);
