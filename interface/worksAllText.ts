@@ -1,6 +1,6 @@
 import { HtmlProps } from "next/dist/shared/lib/html-context";
-const coverWidth:number = 1650
-const coverHeight:number = 960
+const coverWidth:number = 1100
+const coverHeight:number = 640
 
 export const WorksItem7 = {
   title:"専攻コース前期展 rainiar",

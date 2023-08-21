@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
@@ -47,6 +48,9 @@ export const Index = () => {
 
   return (
     <>
+    <Head>
+      <title>KishiHaruki portfolio</title>
+    </Head>
     <div ref={backGroundRef}>
       <DotAnimation />
     </div>

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
@@ -73,6 +74,9 @@ export const WorksPage = () => {
 
   return (
     <>
+    <Head>
+      <title>{data.title} | KishiHaruki</title>
+    </Head>
     <DotAnimation />
     <div className={fade.globalNavigation} ref={navigationRef} >
       <GlobalNavigation topFlag={false}/>

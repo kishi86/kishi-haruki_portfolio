@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import DotAnimation from "@/components/common/dotAnimation"
 import GlobalNavigation from '@/components/common/globalNavigation'
 import Contact from "@/components/common/footer"
@@ -13,9 +14,8 @@ import fade from "@/styles/common/hide.module.scss"
 import React,{Ref, useEffect,useRef} from "react"
 import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
-
-
 import {WorksItem0} from "@/interface/worksAllText"
+
 const data = WorksItem0;
 const WorksPreviewData:WorksPreviewDataProps = {
   preview1:<Item1 />,
@@ -67,6 +67,9 @@ export const WorksPage = () => {
 
   return (
     <>
+    <Head>
+      <title>{data.title} | KishiHaruki</title>
+    </Head>
     <DotAnimation />
     <div className={fade.globalNavigation} ref={navigationRef} >
       <GlobalNavigation topFlag={false}/>
