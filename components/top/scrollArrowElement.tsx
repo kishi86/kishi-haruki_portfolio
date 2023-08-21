@@ -15,10 +15,10 @@ export const ScrollArrow = () =>{
       .add(gsap.fromTo(
         scrollArrow, {
           autoAlpha: 0,
-          y: -20,
+          // y: 20,
           ease: "power2.out",
         },{
-          y: 0,
+          // y: 0,
           autoAlpha: 1,
           delay: 3.5,
           stagger:{
@@ -33,7 +33,7 @@ export const ScrollArrow = () =>{
             delay: 3.5
           },{
             autoAlpha: 0,
-            y: -100,
+            y: -80,
             duration: 1,
             ease: "power4.out",
             scrollTrigger:{
@@ -51,7 +51,7 @@ export const ScrollArrow = () =>{
           delay: 3.5,
         },{
           autoAlpha: 0,
-          y: -100,
+          y: -80,
           duration: 1,
           ease: "power4.out",
           scrollTrigger:{

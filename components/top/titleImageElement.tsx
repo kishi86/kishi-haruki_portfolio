@@ -43,13 +43,14 @@ export const TitleImage = () =>{
 
       gsap.timeline()
       .add(gsap.fromTo(name,{
-        y: -22,
+        y: 22,
         autoAlpha: 0,
         opacity: 0,
       },{
         y: 0,
         autoAlpha: 1,
         opacity: 1,
+        delay:0.4,
         ease:"power1.out",
         stagger:{
           each:0.2
@@ -59,7 +60,7 @@ export const TitleImage = () =>{
         x:"-101%",
       },{
         x:"140%",
-        duration: 1,
+        duration: 1.1,
         ease: "power2.in",
       }))
 
@@ -67,10 +68,10 @@ export const TitleImage = () =>{
         autoAlpha: 0,
       },{
         autoAlpha: 1,
-        delay: 2.9,
-        ease: "power1.out",
+        delay: 3.3,
+        ease: "power1.in",
         stagger:{
-          each:0.06
+          each:0.04
         }
       })
       // .add(gsap.fromTo(subTitle,{
