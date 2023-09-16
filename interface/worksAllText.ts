@@ -5,7 +5,7 @@ const coverHeight:number = 640
 export const WorksItem7 = {
   title:"専攻コース前期展 rainiar",
   category: "インスタレーション",
-  productionTime: "半年",
+  productionTime: "６ヶ月",
   productionPart:"企画、制作、展示",
   tool:"TouchDesigner",
 
