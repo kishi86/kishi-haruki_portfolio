@@ -5,7 +5,7 @@ import Contact from "@/components/common/footer"
 
 import Item0 from "@/components/common/works_items/item0"
 import ItemA from "@/components/common/works_items/itemA"
-import { WorksDescriptionDataProps, WorksDetailDataProps, WorksPreviewDataProps} from "@/interface/works"
+import { WorksDescriptionDataProps, WorksDetailDataProps, WorksPreviewDataProps, WorksVideoDataProps} from "@/interface/works"
 
 import Detail from "@/components/work/detail"
 import Description from "@/components/work/description"
@@ -17,6 +17,8 @@ import { onScroll } from "@/js/hideAnimation"
 import Link from "next/link"
 
 import { WorksItem7 } from "@/interface/worksAllText"
+import DetailVideoIn from '@/components/work/detailVideoIn'
+import { Video_hanabi ,Video_rainiar} from '@/js/video'
 
 
 const data = WorksItem7;
@@ -25,11 +27,17 @@ const WorksPreviewData:WorksPreviewDataProps = {
   preview2:<Item0 />
 }
 
-const worksDetailData:WorksDetailDataProps = {
+const WorksVideoData:WorksVideoDataProps = {
   title: data.title,
-  picturesList: data.picturesList
-
+  picturesList: data.picturesList,
+  video:<Video_rainiar />
 }
+
+// const worksDetailData:WorksDetailDataProps = {
+//   title: data.title,
+//   picturesList: data.picturesList
+
+// }
 const worksDescriptionData:WorksDescriptionDataProps = {
   category: data.category,
   productionTime: data.productionTime,
@@ -73,7 +81,8 @@ export const WorksPage = () => {
     </div>
     
     <main>
-      <Detail data={worksDetailData}/>
+      <DetailVideoIn data={WorksVideoData}/>
+      {/* <Detail data={worksDetailData}/> */}
       <Description data={worksDescriptionData} />
       <Preview data={WorksPreviewData}/>
     </main>

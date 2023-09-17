@@ -29,3 +29,19 @@ export function Video_hanabi (){
     </div>
   )
 }
+
+
+
+export function Video_rainiar (){
+  return(
+    <div className={styles.videoContainer}>
+        <iframe 
+        width="100%" 
+        height="100%" 
+        src="https://www.youtube.com/embed/8-fhGCRoiPs?si=-A8stuRoqoH8dwYV" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" >
+        </iframe>
+    </div>
+  )
+}
+
