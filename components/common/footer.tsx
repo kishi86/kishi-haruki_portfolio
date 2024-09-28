@@ -23,7 +23,7 @@ export const Contact = () =>{
             <img src="../images/common/triangle.svg" alt="" />
           </div>
           <a href="mailto:kishi_haruki&#64;gmail.com">
-            kishi.haruki05@gmail.com
+            jade.may.8617@gmail.com
           </a>
         </div>
       </div>
