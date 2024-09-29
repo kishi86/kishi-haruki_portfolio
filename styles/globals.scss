@@ -14,7 +14,7 @@ html,
    sans-serif;
   font-weight: $normal;
   color: #444444;
-  // font-size: 16pt;
+  font-size: 10px;
   font-feature-settings: "palt";
 }
 body {
@@ -23,11 +23,14 @@ body {
   background-color: #fff;
   isolation: isolate;
 }
-
 h1 ,h2 ,h3 {
   letter-spacing: 0.025em;
   font-family: $en-font-medium;
   font-weight: $normal;
+  font-size: $large-font;
+  @media screen and (max-width:$blake-point) {
+    font-size: $large-font-s;
+  }
 }
 
 ul {

@@ -16,8 +16,8 @@ export const Contact = () =>{
   })
   return(
      <section className={styles.contact}>
-      <div className={styles.back} ref={contactRef}>
-        <div className={styles.contact_address}>
+      <div className={styles.contact__back} ref={contactRef}>
+        <div className={styles.contact__address}>
           <h2>Contact</h2>
           <div className={styles.triangle} >
             <img src="../images/common/triangle.svg" alt="" />

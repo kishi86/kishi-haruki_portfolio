@@ -15,10 +15,8 @@ export const ScrollArrow = () =>{
       .add(gsap.fromTo(
         scrollArrow, {
           autoAlpha: 0,
-          // y: 20,
           ease: "power2.out",
         },{
-          // y: 0,
           autoAlpha: 1,
           delay: 3.8,
           stagger:{
@@ -55,7 +53,7 @@ export const ScrollArrow = () =>{
           duration: 1,
           ease: "power4.out",
           scrollTrigger:{
-            start:'top 70%',
+            start:'top 50%',
             trigger: scrollArrowRef.current,
             // markers:true,
           },
@@ -66,16 +64,17 @@ export const ScrollArrow = () =>{
     })
 
   return(
-    
     <div className={styles.scroll}>
-      <div className={styles.arrow} ref={scrollArrowRef}>
+      <div className={styles.scroll__arrow} ref={scrollArrowRef}>
+      <div className={styles.scroll__arrow__arrow}>
         <img src="../images/common/triangle.svg" alt="" 
         ref={triangleRef}/>
         <img src="../images/common/arrow.svg" alt="" 
         ref={arrowRef}/>
-        <div className={styles.text} ref={textRef}>Scroll</div>
       </div>
+      <div className={styles.scroll__arrow__text} ref={textRef}>Scroll</div>
     </div>
+  </div>
   )
 }
 export default ScrollArrow;

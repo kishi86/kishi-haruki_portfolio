@@ -4,7 +4,6 @@
   position: relative;
   height: 100vh;
   width: auto;
-
   .title {
     margin: 0;
     opacity: 1;
@@ -18,7 +17,7 @@
 
   .scroll {
     position: absolute;
-    right: 32px;
+    right: 40px;
     bottom: 10vh;
   }
 }
@@ -28,22 +27,12 @@
     height: 100vh;
 
     .title {
-      padding-top: 25%;
-      // transform: translateX(-50%, -50%);
-      // margin-bottom: 50vh;
+      padding-top: 40%;
     }
 
     .scroll {
       position: absolute;
       right: 50%;
-    }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .firstView {
-    .title {
-      padding-top: 35%;
     }
   }
 }

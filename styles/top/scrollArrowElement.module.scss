@@ -1,23 +1,16 @@
 @import "../common";
   .scroll {
-    position: fixed;
-    // right: 32px;
-    // bottom: 10vh;
-    .arrow{
-      position: absolute;
+    &__arrow{
       display: flex;
       flex-direction: column;
       align-items: center;
-      img{
-        position: absolute;
-        position: absolute;
-        top: -145px;
+      &__arrow {
+        padding-bottom: 20px;
         width: 10px;
-      }
-      img:first-of-type{
-        top: -160px;
-        animation: bound 0.3s ease-in infinite alternate;
-        @keyframes bound {
+        img:first-of-type{
+          padding-bottom: 5px;
+          animation: bound 0.3s ease-in infinite alternate;
+          @keyframes bound {
             0% {
               transform: translateY(0);
             }
@@ -25,21 +18,21 @@
               transform: translateY(3px);
             }
           }
+        }
       }
-      .text {
+      &__text {
         font-family: $en-font-medium;
-        font-size: 12pt;
-        line-height: 0;
+        font-size: $regular-font;
+        line-height: 1;
         -ms-writing-mode: tb-rl;
         -webkit-writing-mode: vertical-rl;
         writing-mode: vertical-rl;
       }
-      
     }
   }
 
 @media screen and (max-width: $blake-point) {
-  .scroll .arrow .text{
-    font-size: 12pt;
+  .scroll__text{
+    font-size: $mini-font-s;
   }
 }

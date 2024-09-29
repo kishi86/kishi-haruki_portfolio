@@ -40,26 +40,25 @@ export const GlobalNavigation = (props: GlobalNavigation) =>{
     <nav>
       <ul className={styles.menu_list}>
         <li className={styles.menu_item}>
-          <Link href="/" onClick={onClickTop}>
-            <div className={styles.to_top}>Top</div>
+          <Link href="/" onClick={onClickTop} className={styles.to_top}>
+            Top
           </Link>
         </li>
 
         <li className={styles.menu_item}>
-          <Link href="/profilePage">
-            <div className={styles.to_profile}>Profile</div>
+          <Link href="/profilePage" className={styles.to_profile}>
+            Profile
           </Link>
         </li>
 
         <li className={styles.menu_item}>
-          <a href="/#works" onClick={onClickWorks}>
-            <div className={styles.to_works}>Works</div>
+          <a href="/#works" onClick={onClickWorks} className={styles.to_works}>
+            Works
           </a>
         </li>
-        
         <li className={styles.menu_item}>
-          <a href="mailto:kishi_haruki&#64;gmail.com">
-            <div className={styles.to_contact}>Contact</div>
+          <a href="mailto:kishi_haruki&#64;gmail.com" className={styles.to_contact}>
+            Contact
           </a>
         </li>
       </ul>

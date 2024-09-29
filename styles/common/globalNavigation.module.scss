@@ -1,32 +1,16 @@
 @import "../common";
 
 .menu_list {
-  // font-size: 14pt;
-  font-size: $regular-font;
   position: fixed;
   display: flex;
-  justify-content: flex-start;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  // height: $grid*2;
-  height: calc($grid*2);
-  // height: calc(calc(5vmax / 46px) * 46px);
-  // width: calc(22em + 64px*2);
-  // width: $grid*12;
-  padding: 0 64px;
-  
+  gap: 50px;
+  justify-content: center;
   align-items: center;
-  // gap: 64px;
-  .menu_item {
-    position: relative;
-    margin-right: 5vmax;
-  }
-  .menu_item:last-child{
-    margin-right: 0;
-    padding-right: 0;
-  }
-  div {
+  background-color: #ffffff;
+  height: calc($grid*2);
+  width: $grid*10;
+  .menu_item a {
+    font-size: $regular-font;
     font-family: $en-font-medium;
     transition: 0.2s ease-out;
   }
@@ -49,17 +33,13 @@
 }
 
 @media screen and (max-width:$blake-point) {
-  .menu_list .menu_item{
+  .menu_list .menu_item a{
     font-size: $regular-font-s;
   }
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:460px){
   .menu_list{
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    justify-content: space-between;
     width: 100%;
-    padding: 0 10vw;
+    gap: 40px;
   }
 }

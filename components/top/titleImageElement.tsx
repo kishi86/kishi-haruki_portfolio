@@ -74,23 +74,11 @@ export const TitleImage = () =>{
           each:0.04
         }
       })
-      // .add(gsap.fromTo(subTitle,{
-      //   scaleX: 0,
-      //   x: -10,
-      //   duration: 1.2,
-      //   autoAlpha: 0,
-      //   opacity: 0,
-      // },{
-      //   scaleX: 1,
-      //   x: 0,
-      //   autoAlpha: 1,
-      //   opacity: 1
-      // }))
     })
 
   return(
     <div className={styles.title} >
-      <div className={styles.family_name} >
+      <div className={styles.title__family_name} >
         <img src="../images/top/title_images/name_headK.svg" 
         ref={familyNameRef.current[0]}/>
         <img src="../images/top/title_images/name_i.svg" 
@@ -102,7 +90,7 @@ export const TitleImage = () =>{
         <img src="../images/top/title_images/name_i.svg" 
         ref={familyNameRef.current[4]}/>
       </div>
-      <div className={styles.first_name}>
+      <div className={styles.title__first_name}>
         <img src="../images/top/title_images/name_headH.svg" 
         ref={firstNameRef.current[0]}/>
         <img src="../images/top/title_images/name_a.svg" 
@@ -117,7 +105,7 @@ export const TitleImage = () =>{
         ref={firstNameRef.current[5]}/>
       </div>
       
-      <div className={styles.sub_title}>
+      <div className={styles.title__sub_title}>
         <span className={styles.mask} ref={maskRef}/>
         <img src="../images/top/title_images/sub_P.svg" 
         ref={subTitleRef.current[0]}/>
