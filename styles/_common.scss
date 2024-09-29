@@ -21,9 +21,15 @@ $regular-font:1.6rem;
 $mini-font:1.2rem;
 
 $blake-point:768px;
+$blake-point-min:$grid*10;
 
 $large-font-s:2rem;
 $regular-font-s:1.4rem;
 $mini-font-s:1.2rem;
 
 $vw:1;
+
+.container {
+  width: 86vw;
+  margin: 0 auto;
+}

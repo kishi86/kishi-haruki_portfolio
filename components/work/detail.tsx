@@ -46,8 +46,9 @@ export const Detail = ({data}: Props) =>{
   })
   return(
     <section className = {styles.worksDetail}>
-        <h1 ref={titleRef}>{data.title}</h1>
-        <ul className={styles.pictures_list}>
+      <div className={styles.container}>
+        <h2 ref={titleRef} className={styles.worksDetail__title}>{data.title}</h2>
+        <ul className={styles.worksDetail__pictures_list}>
           {data.picturesList.map((imgPath: string, index: number)=>{
             return (
               <li className={styles.pictures} ref={picturesListRef.current[index]}>
@@ -62,6 +63,7 @@ export const Detail = ({data}: Props) =>{
           {/* mapで『List』から取ってきた要素の数だけreturnの中身の処理を返す（生成する） */}
 
         </ul>
+      </div>
       </section>
   )
 }

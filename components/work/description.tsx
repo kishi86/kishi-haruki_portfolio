@@ -21,33 +21,33 @@ export const Description = ({data}: Props) =>{
     )
   })
   return(
-    <section className={styles.description} >
-        <ul className={styles.description_list} ref={descriptionListRef}>
-          <li className={styles.description_item}>
-            <h3>カテゴリ</h3>
-            <p>{data.category}</p>
+    <section className={styles.description}>
+      <div className={styles.container}>
+        <ul className={styles.description__list} ref={descriptionListRef}>
+          <li className={styles.description__item}>
+            <span className={styles.description__item__headline}>カテゴリ</span>
+            <span className={styles.description__item__text}>{data.category}</span>
           </li>
-          <li className={styles.description_item}>
-            <h3>制作時間</h3>
-            <p>{data.productionTime}</p>
+          <li className={styles.description__item}>
+            <span className={styles.description__item__headline}>制作時間</span>
+            <span className={styles.description__item__text}>{data.productionTime}</span>
           </li>
-          <li className={styles.description_item}>
-            <h3>制作部分</h3>
-            <p>{data.productionPart}</p>
+          <li className={styles.description__item}>
+            <span className={styles.description__item__headline}>制作部分</span>
+            <span className={styles.description__item__text}>{data.productionPart}</span>
           </li>
-          <li className={styles.description_item}>
-            <h3>使用ツール</h3>
-            <p>{data.tool}</p>
+          <li className={styles.description__item}>
+            <span className={styles.description__item__headline}>使用ツール</span>
+            <span className={styles.description__item__text}>{data.tool}</span>
           </li>
         </ul>
-
         <div
-         className={styles.description_text}
+         className={styles.description__text}
          dangerouslySetInnerHTML={{__html: data.productionSummary}}
          ref={textRef}
         />
-        
-      </section>
+      </div>  
+    </section>
   )
 }
 export default Description;

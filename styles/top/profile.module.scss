@@ -1,98 +1,87 @@
 @import "../common";
 
 .profile {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: white;
-  margin: 30vh 13vw 30vh 13vh;
-  padding: 9% 5% 6% 6%;
-  
-  .profile_text {
-    .text_narrow{
+  &__box {
+    background-color: white;
+    width: calc(100vw - $grid*8);
+    min-width: $blake-point;
+    max-width: calc(1280px - $grid*8);
+    margin: 30vh auto;
+    padding: 120px 90px 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+  }
+    &__text_narrow{
       display: none;
     }
-    .text_wide{
-      display: block;
+    &__text_wide{
       img{
         height: $regular-font;
-        margin-bottom: 3.4vmax;
+        margin-bottom: $regular-font*2;
       }
       img:last-child{
         margin-bottom: 0;
       }
     }
-    // width: 636px;
-    // width: 43vw;
-    // height: auto;
-  }
-  .profile_button{
-    // border: 1px solid blue;
-    // margin-left: calc(100% - 90px);
-    // font-size: 14pt;
+  
+  &__button{
+    align-self: flex-end;
+    transition: 0.15s ease-out;
+    text-align: right;
     position: relative;
-    margin: 12% 0 0 auto;
-    margin-left: 90%;
+    width: 200px;
+    padding: 10px 0;
     font-family: $en-font-medium;
     font-size: $regular-font;
     letter-spacing: 0.025em;
-    transition: 0.15s ease-out;
   }
-  .profile_button::before{
+  &__button::before{
     content: "";
     position: absolute;
     top: 50%;
-    right: 145%;
+    right: 5em;
     border: 0.5px solid ;
-    width:165%;
-    // right:  80px;
-    // width: 90px;
-    // transition: 0.2s ease-out;
+    width:90px;
   }
-  .profile_button:hover {
-    // background-color: red;
+  &__button:hover {
     color: $pink-red;
   }
 }
 
 @media screen and (max-width: $blake-point) {
   .profile {
-    background-color: white;
-      margin: 20vh 0;
-      padding: 20% 12%;
-    .profile_text 
-    .text_wide img{
+    &__box {
+      padding: 120px 80px 100px;
+      min-width: 100%;
+      row-gap: 80px;
+    }
+    &__text_wide img{
       height: $regular-font-s;
     }
-    .profile_button{
+    &__button{
       font-size: $regular-font-s;
     }
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width:$blake-point-min){
   .profile {
-    background-color: white;
-    margin: 20vh 0;
-    padding: 26% 12%;
-    .profile_text {
-      .text_wide {
-        display: none;
-      }
-      .text_narrow {
-        display: block;
-        img {
-          height: $regular-font-s;
-          margin-bottom: 5.4vmax;
-        }
-        img:last-child {
-          margin-bottom: 0;
-        }
-      }
-      width: 76vmax;
+    &__box {
+      padding: 100px 8vw;
     }
-    .profile_button {
-      margin: 35% 0 0 82%;
+    &__text_wide {
+      display: none;
+    }
+    &__text_narrow {
+      display: block;
+      img {
+        height: $regular-font-s;
+        margin-bottom: $regular-font-s*3;
+      }
+      img:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

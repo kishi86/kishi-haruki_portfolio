@@ -59,8 +59,9 @@ export const Detail = ({data}: Props) =>{
   })
   return(
     <section className = {styles.worksDetail}>
-        <h1 ref={titleRef}>{data.title}</h1>
-        <ul className={styles.pictures_list}>
+      <div className={styles.container}>
+        <h2 ref={titleRef} className={styles.worksDetail__title}>{data.title}</h2>
+        <ul className={styles.worksDetail__pictures_list}>
           <li ref={videoRef}>
             <div className={styles.video}>
               {data.video}
@@ -81,6 +82,7 @@ export const Detail = ({data}: Props) =>{
 
           
         </ul>
+      </div>
       </section>
   )
 }

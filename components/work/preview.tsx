@@ -25,17 +25,17 @@ export const Preview = ({data}: Props) =>{
   })
   return(
     <section className={styles.preview} ref={previewSectionRef}>
-      <div className={styles.thumbnail}>
-        <div className={styles.image}>
-          {data.preview1}
+      <div className={styles.container}>
+        <div className={styles.preview__thumbnail}>
+          <div className={styles.preview__image}>
+            {data.preview1}
+          </div>
+          <div className={styles.preview__image}>
+            {data.preview2}
+          </div>
         </div>
-        <div className={styles.image}>
-          {data.preview2}
-        </div>
-        {/* <Item2 />
-        <Item3 /> */}
-        <Link href={"/#works"} className={styles.button}>
-          View all
+        <Link href={"/#works"} className={styles.preview__button}>
+            View all
         </Link>
       </div>
     </section>

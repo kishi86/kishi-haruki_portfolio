@@ -65,8 +65,9 @@ export const Works = () =>{
   })
   return(
     <section className={styles.works} ref={worksSectionRef}>
+      <div className={styles.container}>
       <h2 ref={sectionTitleRef}>Works</h2>
-      <ul className={styles.works_list}>
+      <ul className={styles.works__list}>
         <li ref={itemRef.current[0]}><Item7 /></li>
         <li ref={itemRef.current[1]}><Item6 /></li>
         <li ref={itemRef.current[2]}><Item5 /></li>
@@ -79,6 +80,7 @@ export const Works = () =>{
         <li ref={itemRef.current[9]}><ItemV0 /></li>
         <li ref={itemRef.current[10]}><ItemA /></li>
       </ul>
+      </div>
     </section>
   )
 }

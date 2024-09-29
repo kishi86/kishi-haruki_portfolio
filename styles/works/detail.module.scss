@@ -1,39 +1,32 @@
 @import "../common";
 .worksDetail{
-  display: flex;
-  flex-flow: column;
   background-color: #ffffff;
-  padding: 12vh $side_padding 5vmax $side_padding;
-  h1{
+  padding: 120px 0 60px;
+  &__title {
+    font-size: $regular-font;
     font-weight: $semi-bold;
-    // font-size: 18pt;
-    font-size: 1.5vmax;
-    margin-bottom: 1.5em;
+    padding-bottom: 40px;
   }
-  .pictures_list{
-    display: block;
+  &__pictures_list{
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
     li{
       position: relative;
-      margin: 0 auto;
       background-color: #eeeeee;
-      margin-bottom: 5%;
-      // height: 100vh;
       height: calc(90vw * 0.6);
       width: 100%;
       .images {
-        // height: 86%;
-        // width: 86%;
-        // top: calc( 50% - 86%/2);
-        // left: calc( 50% - 86%/2);
-        padding: 4%;
-        width: auto;
-        object-fit: contain;
-      }
-      .video{
+        padding: 5%;
         height: 100%;
         width: 100%;
         object-fit: contain;
-        padding: 4%;
+      }
+      .video{
+        padding: 5%;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
@@ -41,9 +34,12 @@
 
 @media screen and (max-width:$blake-point) {
   .worksDetail {
-    padding-top: 8vh;
-    h1{
+    &__title{
       font-size: $regular-font-s;
+      // padding-bottom: 30px;
+    }
+    &__pictures_list {
+      gap: 20px;
     }
   }
 }

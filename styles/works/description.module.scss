@@ -1,71 +1,50 @@
 @import "../common";
 .description{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   background-color: #ffffff;
-  padding: 0px 12% 154px 12%;
-  
-  .description_list{
-    width: 50%;
-    // margin-bottom: 10%;
-    .description_item{
-      display: flex;
-      // font-size: $mini-font;
-      padding-bottom: 2em;
-      // line-height: 2em;
-      h3{
-        // line-height: 2em;
-        font-size: $mini-font;
-        font-weight: $semi-bold;
-        width: 8vw;
-      }
-      p{
-        // line-height: 2em;
-        font-size: $mini-font;
-      }
+  padding-bottom: 120px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    &__headline{
+      font-size: $regular-font-s;
+      font-weight: $semi-bold;
+    }
+    &__text{
+      font-size: $regular-font-s;
     }
   }
-  .description_text{
-    width: 50%;
-    // min-width: 520px;
+
+  &__text{
     p{
-      line-height: 2em;
-      font-size: $mini-font;
+      font-size: $regular-font-s;
+      line-height: 2;
     }
     p:nth-of-type(2){
-      margin-top: 2.4vw;
-      font-size: 1vw;
-      // line-height: 1.7em;
+      margin-top: 30px;
+      font-size: $mini-font;
       color: #a4a4a4;
     }
   }
-}
 
+}
 @media screen and (max-width:$blake-point) {
   .description{
-    .description_list{
-      width: 100%;
-      .description_item{
-        padding-bottom: 1.5em;
-        h3{
-          width: 20vw;
-          font-size: $mini-font-s;
-        }
-        p{
-          font-size: $mini-font-s;
-        }
-      }
+    .container {
+      grid-template-columns: 1fr;
     }
-    .description_text{
-      width: 100%;
-      p{
-        font-size: $mini-font-s;
-        line-height: 2em;
-      }
+    &__text{
       p:nth-of-type(2){
         font-size: $mini-font-s;
-        margin-top: 6.6vw;
       }
     }
   }

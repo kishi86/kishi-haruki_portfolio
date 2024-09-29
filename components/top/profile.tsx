@@ -34,27 +34,28 @@ export const Profile = () =>{
   
   return(
     <section className={styles.profile} ref={ProfileSectionRef}>
-      <div className={styles.profile_text}>
-        {/* <img src="../images/top/profile_text.svg" alt="" className={styles.pc}/> */}
-        <div className={styles.text_wide}>
-          <img src="../images/top/profile_text/profile_text0.svg" alt="" />
-          <img src="../images/top/profile_text/profile_text1.svg" alt="" />
-          <img src="../images/top/profile_text/profile_text2.svg" alt="" />
-          <img src="../images/top/profile_text/profile_text3.svg" alt="" />
-        </div>
-        {/* <img src="../images/top/profile_text_sp.svg" alt="" className={styles.sp}/> */}
-        <div className={styles.text_narrow}>
-          <img src="../images/top/profile_text_narrow/narrow_profile_text0.svg" alt="" />
-          <img src="../images/top/profile_text_narrow/narrow_profile_text1.svg" alt="" />
-          <img src="../images/top/profile_text_narrow/narrow_profile_text2.svg" alt="" />
-          <img src="../images/top/profile_text_narrow/narrow_profile_text3.svg" alt="" />
-          <img src="../images/top/profile_text_narrow/narrow_profile_text4.svg" alt="" />
-          <img src="../images/top/profile_text_narrow/narrow_profile_text5.svg" alt="" />
-        </div>
+      <div className={styles.profile__box}>
+        
+          {/* <img src="../images/top/profile_text.svg" alt="" className={styles.pc}/> */}
+          <div className={styles.profile__text_wide}>
+            <img src="../images/top/profile_text/profile_text0.svg" alt="" />
+            <img src="../images/top/profile_text/profile_text1.svg" alt="" />
+            <img src="../images/top/profile_text/profile_text2.svg" alt="" />
+            <img src="../images/top/profile_text/profile_text3.svg" alt="" />
+          </div>
+          {/* <img src="../images/top/profile_text_sp.svg" alt="" className={styles.sp}/> */}
+          <div className={styles.profile__text_narrow}>
+            <img src="../images/top/profile_text_narrow/narrow_profile_text0.svg" alt="" />
+            <img src="../images/top/profile_text_narrow/narrow_profile_text1.svg" alt="" />
+            <img src="../images/top/profile_text_narrow/narrow_profile_text2.svg" alt="" />
+            <img src="../images/top/profile_text_narrow/narrow_profile_text3.svg" alt="" />
+            <img src="../images/top/profile_text_narrow/narrow_profile_text4.svg" alt="" />
+            <img src="../images/top/profile_text_narrow/narrow_profile_text5.svg" alt="" />
+          </div>
+        <Link href="/profilePage" className={styles.profile__button}>
+          Profile
+        </Link>
       </div>
-      <Link href="/profilePage" className={styles.profile_button}>
-        Profile
-      </Link>
       {/* <ToProfile /> */}
     </section>
   )

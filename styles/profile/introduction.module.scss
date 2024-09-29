@@ -68,7 +68,7 @@
   }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:$blake-point-min){
   .introduction_text .text {
     .text_wide {
       display: none;

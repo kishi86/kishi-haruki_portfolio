@@ -2,54 +2,52 @@
 .preview{
   margin-top: $grid*4;
   background-color: #ffffff;
-  padding: 15% $side_padding;
-  .thumbnail{
-    display: flex;
-    justify-content: left;
-    gap: 2vw;
-    .image{
-      width: calc(50% - 1vw);
-    }
-    .button{
-      // margin-left: 10%;
-      // font-size: 18pt;
-      position: relative;
-      width: 20%;
-      margin: auto 0;
-      font-family: $en-font-medium;
-      font-size: $regular-font;
-      letter-spacing: 0.025em;
-      transition: 0.15s ease-out;
-      text-align: right;
-      align-items: center;
-    }
-    .button::before{
+  padding: 120px 0;
+  .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  &__thumbnail{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+  }
+  
+  &__button {
+    margin: auto 0;
+    transition: 0.15s ease-out;
+    text-align: right;
+    position: relative;
+    height: fit-content;
+    width: 200px;
+    padding: 10px 0;
+    font-family: $en-font-medium;
+    font-size: $regular-font;
+    letter-spacing: 0.025em;
+    &::before {
       content: "";
       position: absolute;
       top: 50%;
-      left: 0;
+      right: 5em;
       border: 0.5px solid;
-      width: 45%;
+      width: 90px;
     }
   }
-  .button:hover{
+  &__button:hover{
     color: $blue;
   }
 }
 @media screen and (max-width:$blake-point) {
   .preview{
-    .thumbnail{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .button{
-        font-size: $mini-font-s;
-        width: 30%;
-        margin:0 0 0 auto;
-        margin-top: 8%;
-      }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
     }
-    
+    &__button {
+      font-size: $regular-font-s;
+      margin-top: 40px;
+      margin-left: calc(86vw - 200px);
+    }
   }
-  
 }
